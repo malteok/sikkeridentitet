@@ -17,52 +17,51 @@
 
 <script src="assets/auth.js"></script>
 <script>
-const SH = "b42d752f99b07679e9c38f5f191e94c4d9e7ad370d3032501d1e8f4457c83a33";
-const ob = ["1a0a4576","19032a3f","220c2d3e","1b25363b","3479223d"];
-const k = "xK";
+// SHA-256 hash of the correct password
+const CORRECT_PASSWORD_HASH = "b42d752f99b07679e9c38f5f191e94c4d9e7ad370d3032501d1e8f4457c83a33";
 
-function hexToBytes(h){
-  const b = new Uint8Array(h.length/2);
-  for(let i=0;i<h.length;i+=2) b[i/2]=parseInt(h.substr(i,2),16);
-  return b;
+async function hashPassword(password) {
+  const encoder = new TextEncoder();
+  const data = encoder.encode(password);
+  const hashBuffer = await crypto.subtle.digest("SHA-256", data);
+  const hashArray = Array.from(new Uint8Array(hashBuffer));
+  return hashArray.map(b => b.toString(16).padStart(2, "0")).join("");
 }
-function xorBytes(buf, keyStr){
-  const key = new TextEncoder().encode(keyStr);
-  const out = new Uint8Array(buf.length);
-  for(let i=0;i<buf.length;i++) out[i]=buf[i]^key[i%key.length];
-  return out;
-}
-async function shaHex(s){
-  const d = new TextEncoder().encode(s);
-  const h = await crypto.subtle.digest("SHA-256", d);
-  return Array.from(new Uint8Array(h)).map(x=>x.toString(16).padStart(2,"0")).join("");
-}
-function bytesToStr(u8){
-  try{ return new TextDecoder().decode(u8); } catch(e){ let s=""; for(let i=0;i<u8.length;i++) s+=String.fromCharCode(u8[i]); return s; }
-}
-function b64decodeSafe(b){ try{return decodeURIComponent(escape(atob(b))); }catch(e){ return atob(b); } }
 
-async function unlock(){
+async function unlock() {
   const input = document.getElementById("pw");
   const err = document.getElementById("err");
-  if(err) err.style.display="none";
-  const val = input? input.value : "";
-  const h = await shaHex(val);
-  if(h !== SH){ if(err) err.style.display="block"; return; }
-
-  // mark session via cookie so other pages are accessible
-  try{ if(window.SIAuth && SIAuth.setAuthCookie) await SIAuth.setAuthCookie('unlocked'); }catch(e){ /* ignore */ }
-
-  const rev = ob.slice().reverse().join('');
-  const bytes = hexToBytes(rev);
-  const xored = xorBytes(bytes, k);
-  const b64 = bytesToStr(xored);
-  const url = b64decodeSafe(b64);
-  location.href = url;
+  
+  // Hide error message
+  if (err) err.style.display = "none";
+  
+  const password = input ? input.value : "";
+  const hash = await hashPassword(password);
+  
+  // Check if password is correct
+  if (hash !== CORRECT_PASSWORD_HASH) {
+    if (err) err.style.display = "block";
+    return;
+  }
+  
+  // Set authentication cookie
+  try {
+    if (window.SIAuth && SIAuth.setAuthCookie) {
+      await SIAuth.setAuthCookie('unlocked');
+    }
+  } catch (e) {
+    console.error('Failed to set auth cookie:', e);
+  }
+  
+  // Redirect to forside.html
+  location.href = 'forside.html';
 }
 
+// Event listeners
 document.getElementById("go").addEventListener("click", unlock);
-document.getElementById("pw").addEventListener("keypress", function(e){ if(e.key === "Enter") unlock(); });
+document.getElementById("pw").addEventListener("keypress", function(e) {
+  if (e.key === "Enter") unlock();
+});
 </script>
 </body>
 </html>

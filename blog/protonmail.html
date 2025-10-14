@@ -1,212 +1,131 @@
+<!-- Save as Protonmail.html -->
 <!DOCTYPE html>
 <html lang="da">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Lær hvordan ProtonMail beskytter dine e-mails med end-to-end kryptering, hide-my-email aliaser og zero-access sikkerhed. Komplet guide til privat kommunikation i 2025.">
-  <title>ProtonMail Guide 2025: Krypteret E-mail og Digital Sikkerhed | Sikker Identitet</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Guide til ProtonMail på dansk — hvordan det virker, hvorfor det beskytter dit privatliv, og hvordan du kommer i gang (2025-opdateret).">
+  <title>ProtonMail — Sikker e-mail og privatliv | Sikker Identitet</title>
+  <!-- Using the site's shared stylesheet - keep paths consistent with your project -->
   <link rel="stylesheet" href="../assets/styles.css">
   <link rel="stylesheet" href="../assets/responsive.css">
 </head>
 <body>
-  <script src="../assets/auth.js"></script>
-  <script>SIAuth.checkAuth().then(ok=>{ if(!ok) location.replace('../index.html'); });</script>
-  <script>
-    window.onload = function() { window.scrollTo(0, 0); };
-  </script>
+  <script>window.onload = function(){ window.scrollTo(0,0); };</script>
 
+  <!-- Header kept consistent with your protonvpn.html header -->
   <section class="hero article-hero">
     <div class="article-hero-content">
       <div class="article-meta">
         <span class="article-tag">Guide</span>
-        <span class="reading-time">6 min læsning</span>
+        <span class="reading-time">7 min læsning</span>
       </div>
-      <h1>Beskyt Din Digitale Identitet med ProtonMail</h1>
-      <p class="accent-lede">En komplet guide til privat, krypteret e-mail og sikker kommunikation i 2025.</p>
+
+      <h1>ProtonMail: Sådan beskytter du din e-mail og dit privatliv</h1>
+      <p class="accent-lede">Alt du behøver at vide om ProtonMail i 2025 — fra kryptering og Bridge til gratis vs. premium og praktiske tips på dansk.</p>
+
       <div class="article-author">
         <img src="../images/author-avatar.jpg" alt="Forfatter avatar" class="author-avatar">
         <div class="author-info">
           <span class="author-name">Skrevet af Malte Okholm</span>
-          <span class="author-title">Digital Sikkerhedsentusiast</span>
+          <span class="author-title">Digital sikkerhedsentusiast</span>
           <span class="publish-date">Oktober 2025</span>
         </div>
       </div>
     </div>
   </section>
 
+  <!-- Main article container -->
   <main class="article-content">
-    <p>Hvis du nogensinde har været bekymret for, hvem der læser dine e-mails, er ProtonMail et af de mest pålidelige værktøjer til at tage kontrollen tilbage over din kommunikation. I en digital verden hvor e-mailhacking og identitetstyveri er stigende, er det vigtigere end nogensinde at beskytte din indbakke.</p>
-    
-    <p>ProtonMail — udviklet i Schweiz af CERN-forskere — er designet til ét formål: at beskytte privatlivet. Tjenesten bruger end-to-end-kryptering og en såkaldt zero-access-arkitektur, hvilket betyder, at selv Proton ikke kan læse dine beskeder.</p>
+    <p class="lede">ProtonMail er en af de mest populære krypterede e-mail-tjenester, og ikke uden grund. Den beskytter dine beskeder med stærk kryptering, har en velkendt privatlivsprofil, og tilbyder både en gratis konto samt flere betalte planer med ekstra funktioner. Denne guide forklarer, hvordan ProtonMail virker, hvordan du kommer i gang, og hvilke overvejelser du bør gøre som privat bruger i 2025.</p>
 
-    <blockquote>
-      I en tid, hvor over 70% af identitetstyverier starter med en kompromitteret e-mailkonto, er din indbakke ikke bare en postkasse — det er nøglen til din digitale identitet. ProtonMail sikrer, at den nøgle forbliver i dine hænder.
-    </blockquote>
+    <h2>Hvad er ProtonMail — kort fortalt</h2>
+    <p>ProtonMail er en schweizisk-baseret e-mail-udbyder med fokus på privatliv. Tjenesten anvender end-to-end og såkaldt <em>zero-access</em> kryptering: det betyder i praksis, at indholdet af dine e-mails er krypteret sådan, at Proton ikke selv kan læse dine beskeder. Det gør ProtonMail til et stærkt valg, hvis du vil minimere hvor meget tredjepart (inkl. udbyderen) kan se om din kommunikation.</p>
 
-    <h2>Hvad Gør ProtonMail Unikt?</h2>
-    <p>ProtonMail skiller sig ud ved at kombinere enkelhed med avanceret sikkerhed. Den er bygget på open-source software, så alle kan gennemgå koden, og placeret under schweizisk lovgivning, som har nogle af verdens strengeste privatlivsregler.</p>
-    
-    <p>I modsætning til Gmail og andre mainstream-tjenester scanner ProtonMail aldrig dine e-mails til reklameformål, og ingen kan få adgang til dit indhold — ikke engang Proton selv. Det er privatliv by design.</p>
+    <blockquote>ProtonMail beskytter indholdet af din postkasse med zero-access og end-to-end kryptering — kun du og dine modtagere kan normalt læse indholdet. :contentReference[oaicite:1]{index=1}</blockquote>
 
-    <div class="feature-box">
-      <h3>Nøglefunktioner i ProtonMail 2025</h3>
-      <ul>
-        <li><strong>Zero-access kryptering:</strong> Dine e-mails krypteres på din enhed før de sendes</li>
-        <li><strong>Proton Sentinel:</strong> Ny AI-drevet sikkerhedsfunktion der beskytter mod avancerede trusler</li>
-        <li><strong>Two-password mode:</strong> Ekstra sikkerhedslag med separat mailbox-kodeord</li>
-        <li><strong>Selvdestruerende e-mails:</strong> Indstil automatisk sletning efter en bestemt tid</li>
-        <li><strong>End-to-end kryptering:</strong> Fuldstændig beskyttelse mellem ProtonMail-brugere</li>
-      </ul>
-    </div>
-
-    <aside class="tip-box">
-      <h3>💡 Tip: Beskyt din identitet med hide-my-email aliaser</h3>
-      <p>ProtonMail's hide-my-email funktion lader dig oprette tilfældige e-mailadresser der videresender til din indbakke. Brug dem til nyhedsbreve, onlinekøb og nye tjenester. Hvis en bliver kompromitteret, deaktiver den simpelthen — uden at påvirke din primære e-mail.</p>
-    </aside>
-
-    <h2>Sådan Fungerer Zero-Access Krypteringen</h2>
-    <p>Det unikke ved ProtonMail er, at dine beskeder krypteres direkte på din enhed, før de forlader din browser eller app. Nøglen til at dekryptere dem eksisterer kun hos dig — ikke på Proton's servere.</p>
-    
-    <p>Når du sender en besked til en anden ProtonMail-bruger, er den automatisk end-to-end krypteret. Sender du til Gmail eller andre tjenester, krypteres beskeden stadig på Proton's servere, og du kan tilføje et ekstra lag sikkerhed med adgangskodebeskyttelse.</p>
+    <h2>Hvorfor vælge ProtonMail?</h2>
+    <ul>
+      <li><strong>Privatliv først:</strong> stærk kryptering og et privatlivscentreret forretningsmodel.</li>
+      <li><strong>Gratis mulighed:</strong> Proton tilbyder en gratis konto med kryptering på samme kerne-niveau som betalte planer — praktisk når du vil prøve uden risiko. :contentReference[oaicite:2]{index=2}</li>
+      <li><strong>Integration:</strong> Proton hører til i et økosystem med ProtonMail, ProtonVPN, ProtonDrive og ProtonPass, som kan give en helhedsorienteret privat løsning.</li>
+    </ul>
 
     <div class="tip-box">
-      <h3>Selvdestruerende beskeder</h3>
-      <p>Indstil en udløbstid på dine e-mails, så de automatisk slettes efter timer, dage eller uger. Perfekt til følsom information der ikke skal ligge permanent i en indbakke.</p>
+      <h3>Hurtigt overblik</h3>
+      <p>ProtonMail er især nyttigt, hvis du vil have en e-mail-konto hvor indhold ikke indsamles til reklamer, og hvor grundlæggende metadata er håndteret med privatliv i mente. For avancerede brugere: Proton Mail Bridge giver mulighed for at bruge din konto i traditionelle desktop-klienter. :contentReference[oaicite:3]{index=3}</p>
     </div>
 
-    <h2>Alias-systemet: Din Digitale Identitets Skjold</h2>
-    <p>En af de mest kraftfulde funktioner i ProtonMail er alias-systemet. I stedet for at bruge din rigtige e-mailadresse overalt online, kan du oprette unikke, tilfældige aliaser der beskytter din identitet.</p>
+    <h2>Hurtig start: Opret konto og opsæt</h2>
+    <ol class="quick-start-guide">
+      <li>
+        <strong>Opret konto</strong>
+        <p>Gå til Proton’s officielle side og vælg 'Mail'. Vælg gratis eller en betalt plan afhængigt af dit behov. Grundfunktionaliteten er allerede krypteret på gratis-niveau. :contentReference[oaicite:4]{index=4}</p>
+      </li>
+      <li>
+        <strong>Bekræft og vælg aliaser</strong>
+        <p>Tilpas dit displaynavn, og opret eventuelt aliaser eller ekstra adresser hvis du ønsker at adskille personligt/arbejde eller nyhedsbrevstilmeldinger.</p>
+      </li>
+      <li>
+        <strong>Aktiver sikkerhedsindstillinger</strong>
+        <p>Slå to-faktor-godkendelse (2FA) til og gennemgå indstillinger for auto-beskyttelse, spamfilter og krypterings-indstillinger.</p>
+      </li>
+    </ol>
 
-    <div class="security-features">
-      <h3>Praktiske anvendelser af aliaser:</h3>
-      <ul>
-        <li><strong>Nyhedsbreve:</strong> Opret en alias til hver nyhedsbrev-tilmelding</li>
-        <li><strong>Onlineshopping:</strong> Brug unikke aliaser til hver webshop</li>
-        <li><strong>Sociale medier:</strong> Hold din rigtige e-mail privat</li>
-        <li><strong>Offentligt WiFi:</strong> Giv aldrig din rigtige adresse til hotspot-logins</li>
-        <li><strong>Jobsøgning:</strong> Spor hvilke virksomheder der sælger dit kontaktinfo</li>
-      </ul>
+    <h2>Brug ProtonMail med din normale mail-klient (Bridge)</h2>
+    <p>Hvis du foretrækker Outlook, Apple Mail eller Thunderbird, kan Proton Mail Bridge installeres som en lille service på din computer. Bridge kører lokalt og dekrypterer/krypterer beskeder mellem Proton og din klient, så du får både komfort og kryptering. Følg Proton’s guide i Bridge-appen for automatisk opsætning. :contentReference[oaicite:5]{index=5}</p>
+
+    <div class="feature-box">
+      <h3>When to use Bridge</h3>
+      <p>Bridge er oplagt når du har brug for lokale arkiver, avanceret klient-workflow (f.eks. Outlook rules) eller når du administrerer mange konti fra én desktop-app.</p>
     </div>
 
-    <p>Aliaserne oprettes direkte i ProtonMail's Security Center, hvor du også kan administrere to-faktor autentifikation og aktivere Proton Sentinel — en AI-drevet sikkerhedsfunktion der automatisk opdager og blokerer avancerede phishing-forsøg og kontoovertagelsesforsøg.</p>
+    <h2>Gratis vs. betalt — hvilke fordele får du?</h2>
+    <p>Proton tilbyder en gratis konto — men hvis du vil have flere aliaser, større lagerplads, custom domæner, flere brugeradresser eller prioriteret support, er det værd at vælge en af de betalte planer. Proton har flere pakkeløsninger (Plus, Unlimited, Family, Visionary mv.) og priser/funktioner kan ændre sig, så tjek altid Proton’s egen pris-oversigt før køb. :contentReference[oaicite:6]{index=6}</p>
 
-    <h2>Hvorfor Vælge ProtonMail i 2025?</h2>
-    <p>I takt med at dataindsamling og e-mailscanning bliver standard hos de store udbydere, bliver privat e-mail ikke bare et valg, men en nødvendighed. ProtonMail tilbyder et troværdigt alternativ, hvor du ikke betaler med dine data.</p>
-    
-    <blockquote>Gmail scanner dine e-mails til reklameformål. Outlook gør det samme. ProtonMail scanner ALDRIG dit indhold — fordi de ikke kan. Det er krypteret før det når deres servere.</blockquote>
-
-    <div class="security-features">
-      <h3>Hvad Får Du med ProtonMail?</h3>
-      <ul>
-        <li><strong>Ægte end-to-end-kryptering:</strong> Ingen adgang for tredjeparter eller regeringer</li>
-        <li><strong>Zero-access arkitektur:</strong> Selv Proton kan ikke dekryptere dine beskeder</li>
-        <li><strong>Schweizisk jurisdiktion:</strong> Beskyttet af verdens stærkeste privatlivslove</li>
-        <li><strong>Open-source:</strong> Transparens og tillid i praksis — koden er åben for alle</li>
-        <li><strong>Ingen tracking:</strong> Dine e-mails scannes aldrig til annoncer eller profilering</li>
-        <li><strong>Cross-platform:</strong> Web, iOS, Android og desktop-apps</li>
-      </ul>
-    </div>
-
-    <h2>Gratis vs. Premium: Hvad Passer Til Dig?</h2>
-    
     <div class="comparison-box">
-      <div class="free-features">
-        <h3>Gratis Plan</h3>
-        <ul>
-          <li><strong>1 GB lagerplads:</strong> Nok til de fleste private brugere</li>
-          <li><strong>1 e-mailadresse:</strong> Din primære ProtonMail-konto</li>
-          <li><strong>150 beskeder/dag:</strong> Daglig sendegrænse</li>
-          <li><strong>End-to-end kryptering:</strong> Fuld beskyttelse mellem ProtonMail-brugere</li>
-          <li><strong>Begrænsede aliaser:</strong> Basis +alias funktionalitet</li>
-          <li><strong>Intet krævet:</strong> Ingen kreditkort eller personlige oplysninger</li>
-        </ul>
-      </div>
-
       <div class="premium-features">
-        <h3>Mail Plus ($3.99/måned)</h3>
+        <h3>Eksempler på premium-fordele</h3>
         <ul>
-          <li><strong>15 GB lagerplads:</strong> Plads til tusindvis af e-mails</li>
-          <li><strong>10 e-mailadresser:</strong> Separate konti til arbejde, privat, osv.</li>
-          <li><strong>Ubegrænset antal beskeder:</strong> Ingen daglige begrænsninger</li>
-          <li><strong>Custom domain support:</strong> Brug din egen domæne (f.eks. @dinvirksomhed.dk)</li>
-          <li><strong>Ubegrænsede hide-my-email aliaser:</strong> Maksimal beskyttelse</li>
-          <li><strong>Proton Sentinel:</strong> Avanceret AI-sikkerhed</li>
-          <li><strong>Prioriteret support:</strong> Hurtigere hjælp når du har brug for det</li>
+          <li>Mere lagerplads</li>
+          <li>Support for custom domæner og flere adresser</li>
+          <li>Priority support og avancerede funktioner</li>
+        </ul>
+      </div>
+      <div class="free-features">
+        <h3>Hvad gratis-kontoen typisk inkluderer</h3>
+        <ul>
+          <li>Grundlæggende krypteret e-mail</li>
+          <li>Et begrænset antal aliaser og mindre lagerplads</li>
+          <li>Mulighed for opgradering senere</li>
         </ul>
       </div>
     </div>
 
-    <div class="tip-box highlight">
-      <h3>Integration med Proton-økosystemet</h3>
-      <p>Med Mail Plus får du også 15 GB delt lagerplads på tværs af ProtonMail, Proton Drive og Proton Calendar. Kombiner med Proton Pass og Proton VPN for komplet digital beskyttelse.</p>
-    </div>
-
-    <h2>Kom i Gang med ProtonMail på 5 Minutter</h2>
-    
-    <div class="quick-start-guide">
-      <ol>
-        <li>
-          <strong>Opret Din Konto</strong>
-          <p>Gå til <a href="https://proton.me/mail" target="_blank" rel="noopener noreferrer" class="external-link">proton.me/mail</a> og vælg mellem gratis eller premium. Ingen kreditkort krævet for gratis plan.</p>
-        </li>
-        <li>
-          <strong>Vælg Dit Brugernavn</strong>
-          <p>Dit brugernavn bliver din @proton.me e-mailadresse. Vælg noget professionelt eller personligt — det er dit valg.</p>
-        </li>
-        <li>
-          <strong>Aktiver To-Faktor Autentifikation</strong>
-          <p>Gå til Security Center og aktivér 2FA med en authenticator app for ekstra beskyttelse.</p>
-        </li>
-        <li>
-          <strong>Opret Dine Første Aliaser</strong>
-          <p>I Security Center kan du oprette hide-my-email aliaser til forskellige formål. Start med én til nyhedsbreve og én til onlineshopping.</p>
-        </li>
-        <li>
-          <strong>Migrer Fra Din Gamle E-mail</strong>
-          <p>Brug Easy Switch-funktionen til automatisk at importere e-mails, kontakter og kalendere fra Gmail, Outlook eller andre tjenester.</p>
-        </li>
-      </ol>
-    </div>
+    <h2>Praktiske tips og gode vaner</h2>
+    <ul>
+      <li>Brug altid 2FA på din Proton-konto.</li>
+      <li>Brug aliaser til nyhedsbreve og offentlige tilmeldinger for at undgå spam i din primære indbakke.</li>
+      <li>Aktivér automatisk kryptering og brug password-beskyttede mails når du sender udenfor Proton-økosystemet.</li>
+      <li>Vær opmærksom på at emnelinjer og visse metadata ikke nødvendigvis er ende-til-ende krypteret — undlad at skrive følsomme oplysninger i emnet.</li>
+    </ul>
 
     <div class="tip-box">
-      <h3>Pro Tip: Two-Password Mode</h3>
-      <p>Aktiver two-password mode for maksimal sikkerhed. Dit login-kodeord giver adgang til kontoen, mens et separat mailbox-kodeord kræves for at dekryptere dine e-mails. Selv hvis nogen stjæler dit login, kan de ikke læse dine beskeder.</p>
+      <h3>Sikkerhedsnote</h3>
+      <p>Selvom ProtonMail krypterer indholdet, kan modtagersystemer (f.eks. Gmail) stadig gemme kopier af beskeder. Hvis det er kritisk, brug krypterede bilag eller password-beskyttede mails.</p>
     </div>
 
-    <h2>Praktiske Sikkerhedstips</h2>
-    
-    <div class="feature-box">
-      <h3>Maksimer Din ProtonMail Sikkerhed</h3>
-      <ul>
-        <li><strong>Brug unikke aliaser:</strong> Opret en ny alias til hver ny tjeneste du tilmelder dig</li>
-        <li><strong>Aktivér Proton Sentinel:</strong> Lad AI beskytte dig mod avancerede trusler</li>
-        <li><strong>Indstil selvdestruktion:</strong> Brug expire-funktionen til følsomme beskeder</li>
-        <li><strong>Verificér modtagere:</strong> Check ProtonMail's farvekodet sikkerhedsstatus før afsendelse</li>
-        <li><strong>Brug adgangskodebeskyttelse:</strong> Når du sender til ikke-Proton brugere</li>
-      </ul>
-    </div>
+    <h2>2025: Hvad er nyt og hvad skal du være opmærksom på?</h2>
+    <p>Proton udvikler løbende nye features (herunder privatlivs-orienterede værktøjer og integrationer). Der har også været omtale i 2025 af juridiske ændringer i Schweiz, som har gjort, at Proton overvejer at flytte eller sprede dele af infrastrukturen for at beskytte brugernes privatliv. Det påvirker sjældent brugeroplevelsen direkte, men er relevant for hvem der fysisk hoster data i fremtiden. Hold øje med Protons egne meddelelser for opdateringer. :contentReference[oaicite:7]{index=7}</p>
 
-    <h2>ProtonMail vs. Gmail: En Ærlig Sammenligning</h2>
-    <p>Gmail er gratis og nem at bruge — men prisen er dine data. Google scanner hver e-mail for at målrette annoncer og bygge en profil af dig. ProtonMail tager den modsatte tilgang: du betaler med penge (eller bruger gratis-versionen), ikke med dit privatliv.</p>
-
-    <blockquote>Den vigtigste forskel er ikke funktionerne — det er filosofien. Gmail er designet til at tjene penge på dine data. ProtonMail er designet til at beskytte dem.</blockquote>
+    <h2>Konklusion — er ProtonMail et godt valg?</h2>
+    <p>Hvis dit primære mål er at beskytte indholdet af dine e-mails og reducere mængden af data, der indsamles om dig, er ProtonMail et stærkt og gennemprøvet valg. Start på gratisplanen, prøv funktionerne, og opgrader hvis du har brug for ekstra lager, domæne-support eller teams/forretningstilpasninger.</p>
 
     <div class="simple-cta">
-      <a href="https://proton.me/mail" class="btn-primary-large" target="_blank" rel="noopener noreferrer">
-        Opret Gratis ProtonMail Konto →
-      </a>
-      <p class="cta-subtext">Ingen kreditkort. Ingen personlige oplysninger. Komplet privatliv.</p>
+      <a href="https://proton.me/mail" class="btn-primary-large" target="_blank" rel="noopener noreferrer">Opret gratis ProtonMail-konto →</a>
     </div>
 
-    <p class="conclusion">ProtonMail beviser, at privatliv og brugervenlighed ikke er modsætninger. Med zero-access kryptering, schweizisk lovgivning og funktioner som hide-my-email aliaser får du både sikkerhed og kontrol. I 2025 er det ikke længere et spørgsmål om hvorvidt du har råd til privat e-mail — det er et spørgsmål om hvorvidt du har råd til IKKE at have det.</p>
-
-    <div class="info-box">
-      <div class="flex-1">
-        <h3 class="h3-compact">Vil du tage din sikkerhed til næste niveau?</h3>
-        <span>Kombiner ProtonMail med Proton Pass til stærke adgangskoder og Proton VPN til anonym browsing. Få en komplet sikkerhedsløsning der beskytter hele din digitale identitet.</span>
-      </div>
-      <a href="protonpass.html" class="btn-secondary">Læs om Proton Pass</a>
-    </div>
+    <p class="conclusion">Vil du have hjælp til at overføre din nuværende e-mail til Proton eller opsætte Proton Mail Bridge på din computer? Skriv hvilke enheder du bruger (Windows/Mac/Linux) så laver jeg en trin-for-trin guide.</p>
 
     <div class="centered-cta">
       <a href="../blog" class="back-link"><span class="arrow">←</span> Tilbage til bloggen</a>
@@ -220,5 +139,13 @@
       <a class="privacy-link" href="../kontakt">Kontakt os</a>
     </div>
   </footer>
+
+  <!-- Local auth script (keeps parity with your protonvpn.html) -->
+  <script src="../assets/auth.js"></script>
+  <script>
+    // Ensure page protection is consistent with site
+    // (English comment per request)
+    SIAuth.checkAuth().then(ok => { if(!ok) location.replace('../index.html'); });
+  </script>
 </body>
 </html>

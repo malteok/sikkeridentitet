@@ -1456,3 +1456,83 @@ body.index-landing{background:linear-gradient(135deg,#172554 0%,#3b82f6 80%);col
 .min-220{min-width:220px}
 .accent-subtle{color:#93c5fd;font-weight:700}
 .h3-small{font-size:1.05rem;color:#0f172a;font-weight:700;margin:0 0 8px 0}
+
+/* ===== Content reference styling (add to styles.css) ===== */
+/* English comments: this block styles the converted content-reference boxes */
+
+.content-ref {
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+  padding: 14px;
+  border-radius: 12px;
+  border-left: 4px solid var(--accent-color, #2b8cff); /* accent color variable fallback */
+  background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(0,0,0,0.02));
+  box-shadow: 0 6px 18px rgba(12,12,12,0.06);
+  margin: 18px 0;
+  font-size: 0.95rem;
+  color: var(--text-color, #eaeaea);
+}
+
+/* small label on the left */
+.content-ref .ref-label {
+  min-width: 72px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  font-size: 0.8rem;
+  color: var(--muted, #cbd5e1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-right: 4px;
+  border-right: 1px solid rgba(255,255,255,0.03);
+}
+
+/* body of the citation */
+.content-ref .ref-body {
+  flex: 1;
+  line-height: 1.45;
+}
+
+/* title / short description */
+.content-ref .ref-title {
+  font-weight: 700;
+  margin-bottom: 6px;
+  color: var(--accent-color, #2b8cff);
+}
+
+/* extra meta (author, date, short site) */
+.content-ref .ref-meta {
+  font-size: 0.85rem;
+  color: var(--muted, #9aa4b2);
+  margin-bottom: 6px;
+}
+
+/* link styling */
+.content-ref .ref-link {
+  display: inline-block;
+  margin-top: 6px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.92rem;
+  padding: 6px 10px;
+  border-radius: 8px;
+  background: rgba(43,140,255,0.12);
+  color: var(--accent-color, #2b8cff);
+  transition: transform .08s ease, box-shadow .12s ease;
+}
+.content-ref .ref-link:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(43,140,255,0.08);
+}
+
+/* fallback style if user keeps the raw :contentReference text as inline code */
+code.content-ref-inline {
+  background: rgba(0,0,0,0.04);
+  padding: 2px 6px;
+  border-radius: 6px;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, "Roboto Mono", monospace;
+  font-size: .9em;
+  color: var(--muted, #9aa4b2);
+}

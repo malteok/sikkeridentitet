@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Beskyt din digitale identitet med Sikker Identitet. Vi guider dig gennem sikkerhed og privatliv i en digital verden.">
+    <title>Sikker Identitet - Din digitale tryghed</title>
+    
+    <!-- Styles -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    
+    <!-- Preload scripts -->
+    <link rel="preload" href="/assets/header-content.js" as="script">
+    <link rel="preload" href="/assets/footer-content.js" as="script">
+    
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .hero-gradient {
+            background: linear-gradient(135deg, #2563eb 0%, #1e40af 100%);
+        }
+        .stat-card {
+            backdrop-filter: blur(10px);
+            background: rgba(255, 255, 255, 0.1);
+        }
+        .feature-icon {
+            background: rgba(255, 255, 255, 0.2);
+        }
+        .threat-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <script src="/assets/header-content.js"></script>
+
+    <!-- Hero Section -->
+    <section class="hero-gradient text-white py-20 px-4 md:px-8">
+        <div class="max-w-6xl mx-auto">
+            <div class="inline-flex items-center bg-white/20 rounded-full px-4 py-2 mb-6">
+                <i class="fas fa-shield-alt mr-2"></i>
+                <span class="text-sm font-medium">Din digitale sikkerhed starter her</span>
+            </div>
+            
+            <div class="max-w-3xl">
+                <h1 class="text-4xl md:text-5xl font-bold mb-6 leading-tight">Beskyt din identitet i en digital verden</h1>
+                <p class="text-xl mb-8 opacity-90">Vi guider dig gennem moderne trusler og giver dig værktøjerne til at beskytte dig selv og dine data effektivt.</p>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-12">
+                    <div class="stat-card rounded-lg p-6 border border-white/20">
+                        <div class="text-3xl font-bold mb-2">12%</div>
+                        <div class="text-sm opacity-80">af danskerne oplevede økonomisk tab fra internet-svindel i 2023</div>
+                    </div>
+                    <div class="stat-card rounded-lg p-6 border border-white/20">
+                        <div class="text-3xl font-bold mb-2">6.000+ kr</div>
+                        <div class="text-sm opacity-80">Gennemsnitligt tab pr. offer</div>
+                    </div>
+                    <div class="stat-card rounded-lg p-6 border border-white/20">
+                        <div class="text-3xl font-bold mb-2">7 mia. kr.</div>
+                        <div class="text-sm opacity-80">Samlede scam-tab årligt</div>
+                    </div>
+                </div>
+
+                <div class="flex flex-wrap gap-4 mb-8">
+                    <div class="flex items-center">
+                        <div class="feature-icon rounded-full p-3 mr-3">
+                            <i class="fas fa-lock"></i>
+                        </div>
+                        <span>Praktiske råd</span>
+                    </div>
+                    <div class="flex items-center">
+                        <div class="feature-icon rounded-full p-3 mr-3">
+                            <i class="fas fa-tools"></i>
+                        </div>
+                        <span>Konkrete værktøjer</span>
+                    </div>
+                    <div class="flex items-center">
+                        <div class="feature-icon rounded-full p-3 mr-3">
+                            <i class="fas fa-user-shield"></i>
+                        </div>
+                        <span>Privatliv først</span>
+                    </div>
+                </div>
+                
+                <div class="flex flex-col sm:flex-row gap-4">
+                    <a href="/blog.html" class="bg-white text-blue-700 hover:bg-gray-100 font-medium rounded-lg px-6 py-3 text-center transition duration-300">Læs Vores Blogs</a>
+                    <a href="/om-os.html" class="border-2 border-white text-white hover:bg-white/20 font-medium rounded-lg px-6 py-3 text-center transition duration-300">Lær Os At Kende</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="py-16 px-4 md:px-8 bg-white">
+        <div class="max-w-4xl mx-auto text-center">
+            <h2 class="text-3xl font-bold mb-6">Om Sikker Identitet</h2>
+            <p class="text-lg mb-4">SikkerIdentitet.dk er skabt med ét formål: at gøre digital sikkerhed forståelig, enkel og tilgængelig for alle.</p>
+            <p class="text-lg">Vi kombinerer viden, værktøjer og praktiske råd, så du kan beskytte dig mod de stigende trusler i den digitale verden. Her finder du indsigt i alt fra passwordhygiejne og tofaktorgodkendelse til privatliv på sociale medier og forebyggelse af ID-misbrug.</p>
+        </div>
+    </section>
+
+    <!-- Threats Section -->
+    <section class="py-16 px-4 md:px-8 bg-gray-50">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center max-w-3xl mx-auto mb-12">
+                <h2 class="text-3xl font-bold mb-4">De nye ansigter af identitetstyveri</h2>
+                <p class="text-lg text-gray-600">Ny teknologi skaber nye måder at udnytte persondata på. Her forklarer vi tre praktiske trusler — hvad de betyder for dig, og hvordan du bedst beskytter dig.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="threat-card bg-white rounded-xl p-6 shadow-md transition duration-300">
+                    <div class="mb-4 overflow-hidden rounded-lg">
+                        <img src="/images/deepfake_portrait_pexels.jpg" alt="Portræt med scanningseffekt - deepfake illustration" class="w-full h-48 object-cover">
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-bold mb-3">Deepfakes og målrettet manipulation</h3>
+                        <p class="text-gray-600">AI kan skabe overbevisende falske videoer, stemmer og beskeder designet til at snyde dig eller andre. Tjek altid afsenderens kilde, og undlad at dele følsomme oplysninger uden bekræftelse.</p>
+                    </div>
+                </div>
+                <div class="threat-card bg-white rounded-xl p-6 shadow-md transition duration-300">
+                    <div class="mb-4 overflow-hidden rounded-lg">
+                        <img src="/images/biometrics.jpg" alt="Biometrisk scanning illustration" class="w-full h-48 object-cover">
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-bold mb-3">Misbrug af biometriske data</h3>
+                        <p class="text-gray-600">Billedbaserede og biometriske identifikatorer kan kopieres eller misbruges i andre systemer. Overvej alternative login-metoder og hold reserveadgang (fx nødkoder) sikkert gemt.</p>
+                    </div>
+                </div>
+                <div class="threat-card bg-white rounded-xl p-6 shadow-md transition duration-300">
+                    <div class="mb-4 overflow-hidden rounded-lg">
+                        <img src="/images/fragments.jpg" alt="Fragmenterede data - synteseangreb illustration" class="w-full h-48 object-cover">
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-bold mb-3">Synteseangreb — når små spor bliver en falsk identitet</h3>
+                        <p class="text-gray-600">Angribere samler små datafragmenter fra flere kilder for at opbygge en troværdig, men falsk, identitet. Mindsk din risiko ved at begrænse deling af personlige oplysninger, bruge stærke adgangskoder og aktivere tofaktor hvor muligt.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Section -->
+    <section class="py-16 px-4 md:px-8 bg-white">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-12">
+                <span class="inline-block bg-blue-100 text-blue-700 px-3 py-1 rounded-full text-sm font-medium mb-4">Vores Blog</span>
+                <h2 class="text-3xl font-bold mb-4">Udforsk Vores Sikkerhedsguides</h2>
+                <p class="text-lg text-gray-600 max-w-2xl mx-auto">Få ekspertråd og praktiske vejledninger til at beskytte din digitale identitet</p>
+            </div>
+
+            <div class="mb-8">
+                <h3 class="text-2xl font-bold mb-6">Udvalgte Artikler</h3>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div class="bg-white rounded-xl shadow-md overflow-hidden border border-gray-100">
+                        <div class="relative">
+                            <img src="/images/forside_password_pexels.jpg" alt="Illustration: adgangskoder og sikker opbevaring" class="w-full h-48 object-cover">
+                            <div class="absolute top-2 right-2 bg-blue-600 text-white text-xs px-2 py-1 rounded">Mest Læste</div>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold mb-3">Sikre adgangskoder med ProtonPass</h3>
+                            <p class="text-gray-600 mb-4">ProtonPass bruger end-to-end kryptering til at sikre dine adgangskoder og gør det nemt at administrere stærke, unikke koder for alle dine konti.</p>
+                            <a href="/blog/protonpass.html" class="text-blue-600 font-medium hover:text-blue-800 inline-flex items-center">Læs artiklen <i class="fas fa-arrow-right ml-2"></i></a>
+                        </div>
+                    </div>
+                    <div class="bg-white rounded-xl shadow-md overflow-hidden border border-gray-100">
+                        <div class="relative">
+                            <img src="/images/forside_vpn_pexels.jpg" alt="Illustration: VPN og netværkssikkerhed" class="w-full h-48 object-cover">
+                            <div class="absolute top-2 right-2 bg-green-600 text-white text-xs px-2 py-1 rounded">Anbefalet</div>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold mb-3">Beskyt din lokation med Proton VPN</h3>
+                            <p class="text-gray-600 mb-4">Proton VPNs no-log policy og stærke kryptering skjuler din placering og beskytter dine data, selv på offentlige netværk.</p>
+                            <a href="/blog/protonvpn.html" class="text-blue-600 font-medium hover:text-blue-800 inline-flex items-center">Læs artiklen <i class="fas fa-arrow-right ml-2"></i></a>
+                        </div>
+                    </div>
+                    <div class="bg-white rounded-xl shadow-md overflow-hidden border border-gray-100">
+                        <div class="relative">
+                            <img src="/images/forside_email_pexels.jpg" alt="Illustration: sikker e-mail og indbakke" class="w-full h-48 object-cover">
+                            <div class="absolute top-2 right-2 bg-yellow-600 text-white text-xs px-2 py-1 rounded">Guide</div>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold mb-3">Sikre e-mails med ProtonMail</h3>
+                            <p class="text-gray-600 mb-4">ProtonMail tilbyder end-to-end krypterede e-mails og alias-adresser, så du kan skjule din rigtige e-mail og beskytte dit privatliv.</p>
+                            <a href="/blog/protonmail.html" class="text-blue-600 font-medium hover:text-blue-800 inline-flex items-center">Læs artiklen <i class="fas fa-arrow-right ml-2"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-blue-50 rounded-xl p-8 text-center">
+                <h3 class="text-2xl font-bold mb-4">Vil du lære mere om digital sikkerhed?</h3>
+                <p class="text-gray-600 mb-6 max-w-2xl mx-auto">Udforsk alle vores blogindlæg med guides, tips og den nyeste viden inden for digital sikkerhed</p>
+                <a href="/blog.html" class="inline-flex items-center bg-blue-600 hover:bg-blue-700 text-white font-medium px-6 py-3 rounded-lg transition duration-300">
+                    Gå til blog oversigten <i class="fas fa-arrow-right ml-2"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <script src="/assets/footer-content.js"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <script>
+        feather.replace();
+    </script>
+</body>
+</html>

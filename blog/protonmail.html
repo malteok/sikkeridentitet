@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Guide til ProtonMail på dansk: hvordan det virker, hvorfor det beskytter dit privatliv, og hvordan du kommer i gang (2025-opdateret).">
+    <title>ProtonMail: Sikker e-mail og privatliv | Sikker Identitet</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            500: '#6366f1',
+                            600: '#4f46e5',
+                            900: '#312e81'
+                        },
+                        muted: '#64748b'
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="preload" href="/assets/header-content.js" as="script">
+    <link rel="preload" href="/assets/footer-content.js" as="script">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/feather-icons"></script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            color: #1f2937;
+        }
+        .article-content ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+        .article-content ul li::before {
+            content: "•";
+            color: #6366f1;
+            font-weight: bold;
+            display: inline-block;
+            width: 1em;
+            margin-left: -1em;
+        }
+        .comparison-box {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+        .hero-gradient {
+            background: linear-gradient(135deg, #312e81 0%, #6366f1 100%);
+        }
+        @media (max-width: 768px) {
+            .comparison-box {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <script src="/assets/header-content.js"></script>
+    
+    <!-- Hero Section -->
+    <section class="hero-gradient text-white py-16">
+        <div class="container mx-auto px-4 max-w-4xl">
+            <div class="flex flex-wrap items-center justify-between mb-6">
+                <span class="bg-white/20 backdrop-blur-sm px-4 py-1 rounded-full text-sm font-medium">Guide</span>
+                <span class="flex items-center text-white/90">
+                    <i data-feather="clock" class="mr-2"></i>
+                    7 min læsning
+                </span>
+            </div>
+            
+            <h1 class="text-4xl md:text-5xl font-bold mb-6 leading-tight">
+                ProtonMail: Din sikre vej til privat kommunikation
+            </h1>
+            
+            <p class="text-xl text-white/90 mb-8 max-w-3xl">
+                Træt af at Google læser dine e-mails? Jeg har brugt ProtonMail i flere år, og her deler jeg mine erfaringer og viser dig, hvordan du også kan få sikker, krypteret e-mail i 2025.
+            </p>
+            
+            <div class="flex items-center">
+                <img src="http://static.photos/people/100x100/42" alt="Forfatter avatar" class="w-16 h-16 rounded-full border-2 border-white/30 mr-4">
+                <div>
+                    <div class="font-semibold">Skrevet af Malte Okholm</div>
+                    <div class="text-white/80">Digital sikkerhedsentusiast</div>
+                    <div class="text-white/70 text-sm">Oktober 2025</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-4 max-w-4xl py-12">
+        <p class="text-lg text-gray-700 mb-10 leading-relaxed">
+            ProtonMail er en af de mest populære krypterede e-mail-tjenester, og ikke uden grund. Den beskytter dine beskeder med stærk kryptering, har en velkendt privatlivsprofil, og tilbyder både en gratis konto samt flere betalte planer med ekstra funktioner. Denne guide forklarer, hvordan ProtonMail virker, hvordan du kommer i gang, og hvilke overvejelser du bør gøre som privat bruger i 2025.
+        </p>
+
+        <div class="bg-indigo-50 border-l-4 border-brand-500 p-6 mb-10 rounded-r-lg">
+            <h2 class="text-xl font-bold text-gray-800 mb-3">Hvad er ProtonMail? Kort fortalt</h2>
+            <p class="text-gray-700">
+                ProtonMail er en schweizisk-baseret e-mail-udbyder med fokus på privatliv. Tjenesten anvender end-to-end og såkaldt <em>zero-access</em> kryptering: det betyder i praksis, at indholdet af dine e-mails er krypteret sådan, at Proton ikke selv kan læse dine beskeder.
+            </p>
+        </div>
+
+        <div class="bg-white border border-gray-200 rounded-xl p-6 mb-10 shadow-sm">
+            <div class="flex justify-between items-start mb-4">
+                <span class="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm font-medium">Kilde</span>
+            </div>
+            <h3 class="font-bold text-gray-800 mb-2">ProtonMail: Sikkerhedsmodel og kryptering</h3>
+            <p class="text-gray-600 text-sm mb-3">Proton AG, Officiel dokumentation (2025)</p>
+            <a href="https://proton.me/mail" target="_blank" rel="noopener noreferrer" class="text-brand-600 font-medium hover:underline flex items-center">
+                Læs mere hos Proton
+                <i data-feather="external-link" class="ml-1 w-4 h-4"></i>
+            </a>
+        </div>
+
+        <h2 class="text-2xl font-bold text-gray-800 mb-5 mt-10">Hvorfor vælge ProtonMail?</h2>
+        <ul class="space-y-4 mb-10">
+            <li class="flex items-start">
+                <div class="bg-brand-100 p-2 rounded-lg mr-4">
+                    <i data-feather="lock" class="text-brand-600 w-5 h-5"></i>
+                </div>
+                <div>
+                    <strong class="text-gray-800">Privatliv først:</strong>
+                    <span class="text-gray-600"> stærk kryptering og en privatlivscentreret forretningsmodel.</span>
+                </div>
+            </li>
+            <li class="flex items-start">
+                <div class="bg-brand-100 p-2 rounded-lg mr-4">
+                    <i data-feather="gift" class="text-brand-600 w-5 h-5"></i>
+                </div>
+                <div>
+                    <strong class="text-gray-800">Gratis mulighed:</strong>
+                    <span class="text-gray-600"> Proton tilbyder en gratis konto med kryptering på samme kerne-niveau som betalte planer.</span>
+                </div>
+            </li>
+            <li class="flex items-start">
+                <div class="bg-brand-100 p-2 rounded-lg mr-4">
+                    <i data-feather="layers" class="text-brand-600 w-5 h-5"></i>
+                </div>
+                <div>
+                    <strong class="text-gray-800">Integration:</strong>
+                    <span class="text-gray-600"> Proton hører til i et økosystem med ProtonVPN, ProtonDrive og ProtonPass som en samlet privatlivsløsning.</span>
+                </div>
+            </li>
+        </ul>
+
+        <div class="bg-amber-50 border-l-4 border-amber-500 p-6 mb-10 rounded-r-lg">
+            <h3 class="text-lg font-bold text-gray-800 mb-3">Hurtigt overblik</h3>
+            <p class="text-gray-700">
+                ProtonMail er især nyttigt, hvis du vil have en e-mail-konto hvor indhold ikke indsamles til reklamer, og hvor grundlæggende metadata håndteres med respekt for dit privatliv. For avancerede brugere: Proton Mail Bridge giver mulighed for at bruge din konto i traditionelle desktop-klienter.
+            </p>
+        </div>
+
+        <h2 class="text-2xl font-bold text-gray-800 mb-5">Hurtig start: Opret konto og opsæt</h2>
+        <div class="mb-10">
+            <ol class="space-y-6">
+                <li class="flex">
+                    <div class="flex-shrink-0 h-10 w-10 rounded-full bg-brand-500 flex items-center justify-center text-white font-bold mr-4">1</div>
+                    <div>
+                        <strong class="text-gray-800">Opret konto</strong>
+                        <p class="text-gray-600">Gå til Proton's officielle side og vælg 'Mail'. Vælg gratis eller en betalt plan afhængigt af dit behov.</p>
+                    </div>
+                </li>
+                <li class="flex">
+                    <div class="flex-shrink-0 h-10 w-10 rounded-full bg-brand-500 flex items-center justify-center text-white font-bold mr-4">2</div>
+                    <div>
+                        <strong class="text-gray-800">Bekræft og vælg aliaser</strong>
+                        <p class="text-gray-600">Tilpas dit displaynavn, og opret eventuelt aliaser eller ekstra adresser.</p>
+                    </div>
+                </li>
+                <li class="flex">
+                    <div class="flex-shrink-0 h-10 w-10 rounded-full bg-brand-500 flex items-center justify-center text-white font-bold mr-4">3</div>
+                    <div>
+                        <strong class="text-gray-800">Aktiver sikkerhedsindstillinger</strong>
+                        <p class="text-gray-600">Slå to-faktor-godkendelse (2FA) til og gennemgå indstillinger for spamfilter og kryptering.</p>
+                    </div>
+                </li>
+            </ol>
+        </div>
+
+        <div class="bg-violet-50 rounded-xl p-6 mb-10">
+            <h2 class="text-2xl font-bold text-gray-800 mb-4">Brug ProtonMail med din normale mail-klient (Bridge)</h2>
+            <p class="text-gray-700 mb-4">
+                Hvis du foretrækker Outlook, Apple Mail eller Thunderbird, kan Proton Mail Bridge installeres som en lille service på din computer. Bridge kører lokalt og dekrypterer/krypterer beskeder mellem Proton og din klient, så du får både komfort og kryptering.
+            </p>
+            <div class="bg-white border border-gray-200 rounded-lg p-4">
+                <h3 class="font-bold text-gray-800 mb-2">Hvornår skal du bruge Bridge?</h3>
+                <p class="text-gray-600">
+                    Bridge er oplagt, når du har brug for lokale arkiver, avanceret klient-workflow (f.eks. regler i Outlook), eller hvis du administrerer mange konti fra én desktop-app.
+                </p>
+            </div>
+        </div>
+
+        <h2 class="text-2xl font-bold text-gray-800 mb-5">Gratis eller betalt: hvilke fordele får du?</h2>
+        <p class="text-gray-700 mb-6">
+            Proton tilbyder en gratis konto, men hvis du vil have flere aliaser, større lagerplads, custom domæner, flere brugeradresser eller prioriteret support, er det værd at vælge en af de betalte planer.
+        </p>
+
+        <div class="comparison-box mb-10">
+            <div class="bg-white border border-gray-200 rounded-xl p-6 shadow-sm">
+                <h3 class="text-lg font-bold text-gray-800 mb-4">Eksempler på premium-fordele</h3>
+                <ul class="space-y-3">
+                    <li class="flex items-start">
+                        <i data-feather="check-circle" class="text-green-500 mr-2 mt-1 w-5 h-5"></i>
+                        <span>Mere lagerplads</span>
+                    </li>
+                    <li class="flex items-start">
+                        <i data-feather="check-circle" class="text-green-500 mr-2 mt-1 w-5 h-5"></i>
+                        <span>Support for custom domæner og flere adresser</span>
+                    </li>
+                    <li class="flex items-start">
+                        <i data-feather="check-circle" class="text-green-500 mr-2 mt-1 w-5 h-5"></i>
+                        <span>Priority support og avancerede funktioner</span>
+                    </li>
+                </ul>
+            </div>
+            <div class="bg-white border border-gray-200 rounded-xl p-6 shadow-sm">
+                <h3 class="text-lg font-bold text-gray-800 mb-4">Hvad gratis-kontoen typisk inkluderer</h3>
+                <ul class="space-y-3">
+                    <li class="flex items-start">
+                        <i data-feather="check" class="text-brand-500 mr-2 mt-1 w-5 h-5"></i>
+                        <span>Grundlæggende krypteret e-mail</span>
+                    </li>
+                    <li class="flex items-start">
+                        <i data-feather="check" class="text-brand-500 mr-2 mt-1 w-5 h-5"></i>
+                        <span>Et begrænset antal aliaser og mindre lagerplads</span>
+                    </li>
+                    <li class="flex items-start">
+                        <i data-feather="check" class="text-brand-500 mr-2 mt-1 w-5 h-5"></i>
+                        <span>Mulighed for opgradering senere</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <h2 class="text-2xl font-bold text-gray-800 mb-5">Praktiske tips og gode vaner</h2>
+        <ul class="space-y-4 mb-10">
+            <li class="flex items-start">
+                <div class="bg-green-100 p-2 rounded-lg mr-4">
+                    <i data-feather="shield" class="text-green-600 w-5 h-5"></i>
+                </div>
+                <div>
+                    <span class="text-gray-700">Brug altid 2FA på din Proton-konto.</span>
+                </div>
+            </li>
+            <li class="flex items-start">
+                <div class="bg-green-100 p-2 rounded-lg mr-4">
+                    <i data-feather="mail" class="text-green-600 w-5 h-5"></i>
+                </div>
+                <div>
+                    <span class="text-gray-700">Brug aliaser til nyhedsbreve og offentlige tilmeldinger for at undgå spam i din primære indbakke.</span>
+                </div>
+            </li>
+            <li class="flex items-start">
+                <div class="bg-green-100 p-2 rounded-lg mr-4">
+                    <i data-feather="key" class="text-green-600 w-5 h-5"></i>
+                </div>
+                <div>
+                    <span class="text-gray-700">Aktivér automatisk kryptering og brug password-beskyttede mails når du sender udenfor Proton-økosystemet.</span>
+                </div>
+            </li>
+            <li class="flex items-start">
+                <div class="bg-green-100 p-2 rounded-lg mr-4">
+                    <i data-feather="alert-triangle" class="text-green-600 w-5 h-5"></i>
+                </div>
+                <div>
+                    <span class="text-gray-700">Vær opmærksom på at emnelinjer og visse metadata ikke nødvendigvis er ende-til-ende krypteret. Undlad derfor at skrive følsomme oplysninger i emnet.</span>
+                </div>
+            </li>
+        </ul>
+
+        <div class="bg-rose-50 border-l-4 border-rose-500 p-6 mb-10 rounded-r-lg">
+            <h3 class="text-lg font-bold text-gray-800 mb-3">Sikkerhedsnote</h3>
+            <p class="text-gray-700">
+                Selvom ProtonMail krypterer indholdet, kan modtagersystemer (f.eks. Gmail) stadig gemme kopier af beskeder. Hvis det er kritisk, brug krypterede bilag eller password-beskyttede mails.
+            </p>
+        </div>
+
+        <div class="bg-purple-50 rounded-xl p-6 mb-10">
+            <h2 class="text-2xl font-bold text-gray-800 mb-4">2025: Hvad er nyt og hvad skal du være opmærksom på?</h2>
+            <p class="text-gray-700 mb-4">
+                Proton udvikler løbende nye features og tjenester. Der har også været omtale i 2025 af juridiske ændringer i Schweiz, som har gjort, at Proton overvejer at flytte eller sprede dele af infrastrukturen for at beskytte brugernes privatliv.
+            </p>
+            <div class="bg-white border border-gray-200 rounded-lg p-4">
+                <div class="flex justify-between items-start mb-3">
+                    <span class="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm font-medium">Kilde</span>
+                </div>
+                <h3 class="font-bold text-gray-800 mb-2">Nyhedsrapport: Schweiziske lovændringer (2025)</h3>
+                <p class="text-gray-600 text-sm mb-3">Digital Privacy News · Oktober 2025</p>
+                <a href="https://proton.me/blog" target="_blank" rel="noopener noreferrer" class="text-brand-600 font-medium hover:underline flex items-center">
+                    Læs mere hos Proton Blog
+                    <i data-feather="external-link" class="ml-1 w-4 h-4"></i>
+                </a>
+            </div>
+        </div>
+
+        <h2 class="text-2xl font-bold text-gray-800 mb-5">Konklusion: Er ProtonMail et godt valg?</h2>
+        <p class="text-gray-700 mb-10">
+            Hvis dit primære mål er at beskytte indholdet af dine e-mails og reducere mængden af data, der indsamles om dig, er ProtonMail et stærkt og gennemprøvet valg. Start på gratisplanen, prøv funktionerne, og opgrader hvis du har brug for ekstra lager, domæne-support eller teamfunktioner.
+        </p>
+
+        <div class="text-center mb-12">
+            <a href="https://proton.me/mail" target="_blank" rel="noopener noreferrer" class="inline-block bg-brand-600 hover:bg-brand-700 text-white font-bold py-4 px-8 rounded-lg transition duration-300 transform hover:scale-105">
+                Opret gratis ProtonMail-konto
+                <i data-feather="arrow-right" class="inline ml-2 w-5 h-5"></i>
+            </a>
+        </div>
+
+        <!-- Info Box -->
+        <div class="bg-white border border-gray-200 rounded-xl p-6 mb-10 shadow-sm flex flex-col md:flex-row items-center">
+            <div class="flex-1 mb-4 md:mb-0 md:pr-6">
+                <h3 class="text-lg font-bold text-gray-800 mb-2">Har du styr på din adgangskode, og er den stærk nok til at modstå hackere?</h3>
+                <p class="text-gray-600">
+                    Beskyt dine konti med stærke adgangskoder. Få konkrete tips og lær, hvordan du bruger password managers til at sikre din digitale identitet.
+                </p>
+            </div>
+            <a href="/blog/protonpass.html" class="bg-gray-800 hover:bg-gray-900 text-white font-medium py-3 px-6 rounded-lg transition whitespace-nowrap">
+                Læs guide
+            </a>
+        </div>
+
+        <div class="text-center">
+            <a href="/blog.html" class="text-brand-600 font-medium hover:underline flex items-center justify-center">
+                <i data-feather="arrow-left" class="mr-2 w-5 h-5"></i>
+                Tilbage til bloggen
+            </a>
+        </div>
+    </main>
+
+    <script src="/assets/footer-content.js"></script>
+
+    <script>
+        feather.replace();
+    </script>
+</body>
+</html>

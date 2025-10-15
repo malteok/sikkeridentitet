@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Analyse af Chatkontrol i EU og Danmark: lovgivning, implementering, privatliv, sikkerhed og hvad du kan gøre.">
+    <title>Chatkontrol i EU og Danmark — Sikker Identitet</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <link rel="preload" href="/assets/header-content.js" as="script">
+    <link rel="preload" href="/assets/footer-content.js" as="script">
+    <style>
+        :root {
+            --brand-500: #3b82f6;
+            --brand-600: #2563eb;
+            --brand-900: #1e3a8a;
+            --muted: #64748b;
+        }
+        
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            color: #1f2937;
+        }
+        
+        .hero-gradient {
+            background: linear-gradient(135deg, var(--brand-500) 0%, var(--brand-900) 100%);
+        }
+        
+        .authority-box {
+            background: rgba(59,130,246,0.05);
+            border-left: 4px solid var(--brand-500);
+            padding: 20px;
+            margin: 25px 0;
+            border-radius: 8px;
+            font-style: italic;
+        }
+        
+        .centered-cta {
+            text-align: center;
+            margin: 2rem 0;
+        }
+        
+        .back-link {
+            color: var(--brand-500);
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.3s ease;
+        }
+        
+        .back-link:hover {
+            color: var(--brand-600);
+        }
+        
+        .article-content {
+            position: relative;
+            z-index: 1;
+            margin-top: 0;
+        }
+        
+        .ref-link {
+            color: var(--brand-500);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1rem;
+            transition: color 0.3s ease;
+            display: block;
+            margin-bottom: 0.5rem;
+            padding: 0.5rem 0;
+        }
+        
+        .ref-link:hover {
+            color: var(--brand-600);
+            text-decoration: underline;
+        }
+        
+        .ref-title ul {
+            display: none;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <script src="/assets/header-content.js"></script>
+    <script>
+        window.onload = function() {
+            window.scrollTo(0, 0);
+        };
+    </script>
+
+    <!-- Hero sektion med blå baggrund -->
+    <section class="hero article-hero hero-gradient text-white py-16 md:py-24">
+        <div class="container mx-auto px-4 max-w-4xl">
+            <div class="flex flex-wrap items-center mb-4">
+                <span class="bg-blue-800 bg-opacity-30 text-blue-100 px-3 py-1 rounded-full text-sm font-medium mr-3">Analyse</span>
+                <span class="text-blue-100 opacity-90">8 min læsning</span>
+            </div>
+            <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight mb-4">Chatkontrol: Når sikkerhed bliver overvågning</h1>
+            <p class="text-xl md:text-2xl text-blue-100 mb-8 max-w-3xl">Et kritisk, neutralt blik på EU's Chatkontrol-forslag - konsekvenser for privatliv, sikkerhed og borgerrettigheder i Danmark.</p>
+            <div class="flex items-center">
+                <img src="http://static.photos/people/320x320/42" alt="Forfatter avatar" class="w-16 h-16 rounded-full mr-4 border-2 border-white">
+                <div>
+                    <div class="font-semibold text-lg">Skrevet af Malte Okholm</div>
+                    <div class="text-blue-200">Digital Sikkerhedsentusiast</div>
+                    <div class="text-blue-200">Oktober 2025</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Artiklens indhold starter KORREKT efter den blå header -->
+    <main class="article-content container mx-auto px-4 max-w-4xl py-12">
+        <p class="text-lg mb-6">I 2025 står vi over for hidtil usete udfordringer med digital overvågning og cybertrusler. Nye undersøgelser viser, at over 70% af danskerne har oplevet forsøg på digital svindel det seneste år, og metoderne bliver stadig mere sofistikerede. Det er derfor vigtigere end nogensinde at beskytte både din lokation og digitale identitet.</p>
+
+        <h2 class="text-2xl font-bold mt-10 mb-4">Hvad er chatkontrol?</h2>
+        <p class="mb-6">EU-kommissionen introducerede i 2022 et forslag til en forordning mod seksuelt misbrug af børn (ofte kaldet "Chatkontrol") med det formål at styrke bekæmpelsen af online overgreb. Ifølge forslaget skal digitale tjenester opdage, indberette og fjerne både kendt og ukendt materiale med seksuelt misbrug af børn samt forsøg på grooming af mindreårige. Ideelt skal det fælles EU-regelsæt sikre, at platforme hjælper med at stoppe udbredelsen af overgrebsmateriale. Også danske politikere og børneorganisationer anerkender, at seksuelle overgreb mod børn er et voksende problem.</p>
+
+        <h2 class="text-2xl font-bold mt-10 mb-4">Hvad indebærer forslaget?</h2>
+        <p class="mb-6">Forslaget vil medføre, at alle beskeder, billeder og filer i private chat-tjenester automatisk skal scannes for krænkende indhold på brugerens egen enhed, inden indholdet sendes eller krypteres. EU-kommissionen beskriver det som et påbud til platforme om at scanne private beskeder for materiale med seksuelt misbrug af børn på brugerens enhed. Det betyder, at alle kommunikationstjenester, også stærkt krypterede apps som WhatsApp og Signal, rammes. Ifølge websitet FightChatControl vil enhver privat besked, ethvert foto og enhver fil automatisk blive scannet uden tilladelse eller mistanke, hvilket udgør masseovervågning af alle EU's borgere. Hvis forordningen vedtages, vil medlemslandene få op til 24 måneder til at gennemføre den i national ret.</p>
+
+        <h2 class="text-2xl font-bold mt-10 mb-4">Debatten i Danmark</h2>
+        <p class="mb-6">I Danmark har det udløst en livlig debat. Regeringen under det danske EU-formandskab har arbejdet på et kompromisforslag, som efter sigende begrænser omfanget. Ifølge Børns Vilkårs direktør vil det kun omfatte udvalgte tjenester og specifikt indhold i en begrænset periode. Men kritikere advarer bredt. En alliance af danske organisationer, herunder IDA, Teleindustrien og it-tænketanken Justitia, har sendt et åbent brev til Justitsministeren med krav om at stemme nej til forslaget. De kalder forordningen ekstremt vidtgående og mener, at den i praksis betyder totalovervågning af alle europæiske borgere. Eksperter bemærker også, at alle former for digital kommunikation vil være omfattet – ikke kun beskeder på sociale medier, men også SMS, e-mail og telefonopkald.</p>
+
+        <p class="mb-6">Dansk Folkeparti har foreslået – og senere droppet – et beslutningsforslag om, at Danmark aktivt skal arbejde imod Chatkontrol. Partiet advarer om, at forslaget indebærer generel overvågning og screening af borgernes digitale kommunikation, og at alle tjenester pålægges at scanne alt indhold for ulovligt materiale. De henviser til Danmarks grundlov (§72), som kun tillader efterforskning af private papirer og samtaler med dommerkendelse – en garanti, som Chatkontrol ifølge dem omgår.</p>
+
+        <h2 class="text-2xl font-bold mt-10 mb-4">Konsekvenser for privatliv og it-sikkerhed</h2>
+        <p class="mb-6">Kritikere frygter, at Chatkontrol underminerer både privatliv og sikkerhed. Hvis man kræver scanning før kryptering, vil det i praksis kræve, at krypteringen brydes med bagdøre. Eksperter påpeger, at man teknisk set ikke kan gennemføre forslaget uden at åbne sådanne bagdøre – og at de let kan misbruges.</p>
+        
+        <div class="authority-box">Ifølge professor Jens Myrup Pedersen (AAU) er det "et meget omfattende indgreb i privatlivet". Han frygter desuden, at scanning vil give falske positiver, hvor uskyldigt indhold fejlagtigt markeres, og at det øger risikoen for hackerangreb.</div>
+        
+        <div class="authority-box">Peer Heinlein (mailbox.org) advarer: "Der er ingen lille bagdør – enhver teknisk adgangsvej vil før eller siden blive udnyttet."</div>
+
+        <div class="authority-box">Ifølge IDA's Grit Munk vil forordningen give "adgang til at gå dybt ind i borgernes kommunikation" og udgør dermed et voldsomt indgreb i meddelelseshemmeligheden. Hun understreger, at det er afgørende, at borgerne trygt kan bruge digitale kanaler uden frygt for, at staten eller andre snager i indholdet.</div>
+
+        <p class="mb-6">Flere organisationer advarer også om fejl og retssikkerhed. En automatisk scanner kan aldrig være 100 % præcis, og kampagne-sider som FightChatControl peger på, at selv uskyldige feriebilleder kan fejltolkes som ulovligt materiale. Det kan føre til fejlagtige mistanker mod uskyldige borgere. Eksperter advarer desuden mod, at EU-lovgivningen ikke gælder for politikere på samme måde som for borgere, hvilket kan skabe yderligere mistillid.</p>
+
+        <div class="authority-box">It-Politisk Forenings formand Jesper Lund advarer om en farlig glidebane. Han frygter, at når først Chatkontrol indføres, vil det være svært at afvise fremtidige krav om yderligere overvågning. Europæiske forskere peger på, at forslaget kan sætte et globalt præcedens, som autoritære stater kan bruge som undskyldning for øget kontrol.</div>
+
+        <h2 class="text-2xl font-bold mt-10 mb-4">Hvad kan du som dansker gøre?</h2>
+        <p class="mb-6">Som borger kan du engagere dig på flere måder. Du kan støtte borgerforslag som "Nej til EU's masseovervågning", som allerede har fået titusinder af støtter, og som har bragt emnet til debat i Folketinget. Du kan skrive til dine politikere, både i Danmark og i EU, og give din mening til kende. Internationale kampagner som StopChatControl.eu giver værktøjer til at kontakte beslutningstagere. Du kan også bruge sociale medier til at dele viden og deltage i debatten under hashtags som <strong>#ChatControl</strong> og <strong>#StopScanningMe</strong>.</p>
+
+        <p class="mb-6">Endelig kan du beskytte dig teknisk. Brug kommunikationstjenester med stærk kryptering, og vær bevidst om, hvilke data du deler. Privatliv og ytringsfrihed er grundlæggende rettigheder, der kræver vedvarende opmærksomhed og engagement fra os alle.</p>
+
+        <h2 class="text-2xl font-bold mt-10 mb-4">Konklusion</h2>
+        <p class="mb-8">EU's forslag om Chatkontrol har et legitimt mål: at beskytte børn mod overgreb. Men mange danske eksperter og organisationer advarer om, at midlet kan true fundamentale rettigheder. Hvis privat kommunikation ikke længere er privat, står vi overfor en ny virkelighed, hvor tilliden til digitale platforme svækkes. Som borgere bør vi kræve løsninger, der beskytter både sikkerhed og frihed.</p>
+
+        <div class="border-t border-gray-200 pt-8 mt-8">
+            <div class="font-bold text-lg mb-4">Kilder</div>
+            <div class="text-gray-600 text-sm mb-4">Kilder og dokumentation indsamlet 2025</div>
+            <a class="ref-link" href="https://fightchatcontrol.eu" target="_blank" rel="noopener noreferrer">📄 Læs mere hos Fight Chat Control</a>
+            <a class="ref-link" href="https://justitia-int.org" target="_blank" rel="noopener noreferrer">📄 Læs mere hos Justitia</a>
+            <a class="ref-link" href="https://csa-scientist-open-letter.org" target="_blank" rel="noopener noreferrer">📄 Læs videnskabeligt brev</a>
+            <a class="ref-link" href="https://borgerforslag.dk" target="_blank" rel="noopener noreferrer">📄 Læs borgerforslag</a>
+            <a class="ref-link" href="https://stopchatcontrol.eu" target="_blank" rel="noopener noreferrer">📄 Læs mere hos Stop Chat Control</a>
+        </div>
+
+        <div class="centered-cta mt-12">
+            <a href="/blog.html" class="back-link inline-flex items-center">
+                <i data-feather="arrow-left" class="mr-2"></i> Tilbage til bloggen
+            </a>
+        </div>
+    </main>
+
+    <script src="/assets/footer-content.js"></script>
+    <script>
+        feather.replace();
+    </script>
+</body>
+</html>

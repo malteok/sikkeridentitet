@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digitale Identitet — Sikker Identitet</title>
+    <meta name="description" content="Artikel om digitale identiteter, sikkerhed og privatliv. Indhold kommer snart.">
+    <link rel="stylesheet" href="/assets/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="preload" href="/assets/header-content.js" as="script">
+    <link rel="preload" href="/assets/footer-content.js" as="script">
+    <style>
+        /* Sikre at hero-sektionen har hvid tekst og starter korrekt */
+        .article-hero {
+            position: relative;
+            z-index: 2;
+        }
+        
+        .article-hero-content h1 {
+            color: white !important;
+        }
+        
+        .article-hero-content .accent-lede {
+            color: rgba(255, 255, 255, 0.9) !important;
+        }
+        
+        /* Sikre at artiklens indhold starter efter den blå header */
+        .article-content {
+            position: relative;
+            z-index: 1;
+            margin-top: 0;
+        }
+    </style>
+</head>
+<body>
+    <script src="/assets/header-content.js"></script>
+    <script>
+        window.onload = function() {
+            window.scrollTo(0, 0);
+        };
+    </script>
+
+    <!-- Hero sektion med blå baggrund og HVID tekst - samme som protonvpn.html -->
+    <section class="hero article-hero">
+        <div class="article-hero-content">
+            <div class="article-meta">
+                <span class="article-tag">Guide</span>
+                <span class="reading-time">5 min læsning</span>
+            </div>
+            <h1>Digitale identiteter & privatliv</h1>
+            <p class="accent-lede">En introduktion til digitale identiteter, sikkerhedsrisici og beskyttelsesstrategier.</p>
+            <div class="article-author">
+                <img src="/images/author-avatar.jpg" alt="Forfatter avatar" class="author-avatar">
+                <div class="author-info">
+                    <span class="author-name">Skrevet af Malte Okholm</span>
+                    <span class="author-title">Digital Sikkerhedsentusiast</span>
+                    <span class="publish-date">Oktober 2025</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Artiklens indhold starter KORREKT efter den blå header -->
+    <main class="article-content">
+        <!-- Article content intentionally left empty. Add paragraphs and sections here when ready. -->
+
+        <p>Indhold kommer snart...</p>
+
+        <div class="centered-cta">
+            <a href="/blog.html" class="back-link"><span class="arrow">←</span> Tilbage til bloggen</a>
+        </div>
+    </main>
+
+    <script src="/assets/footer-content.js"></script>
+</body>
+</html>

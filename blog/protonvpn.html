@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Lær, hvordan Proton VPN beskytter din lokation og identitet online. Få praktisk viden om digital sikkerhed og hvordan du undgår identitetstyveri i 2025.">
+  <title>Beskyt Din Lokation og Identitet med Proton VPN | Digital Sikkerhed</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preload" href="/assets/header-content.js" as="script">
+  <link rel="preload" href="/assets/footer-content.js" as="script">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+    
+    :root {
+      --brand-500: #3b82f6;
+      --brand-600: #2563eb;
+      --brand-900: #1e3a8a;
+      --muted: #64748b;
+    }
+    
+    body {
+      font-family: 'Inter', sans-serif;
+      color: #1f2937;
+    }
+    
+    .brand-bg {
+      background-color: var(--brand-500);
+    }
+    
+    .brand-bg-dark {
+      background-color: var(--brand-900);
+    }
+    
+    .brand-text {
+      color: var(--brand-500);
+    }
+    
+    .muted-text {
+      color: var(--muted);
+    }
+    
+    .article-hero {
+      position: relative;
+      z-index: 2;
+    }
+    
+    .article-content {
+      position: relative;
+      z-index: 1;
+      margin-top: 0;
+    }
+    
+    .tip-box {
+      background-color: #eff6ff;
+      border-left: 4px solid var(--brand-500);
+      padding: 1.5rem;
+      border-radius: 0 0.5rem 0.5rem 0;
+      margin: 2rem 0;
+    }
+    
+    .tip-box.highlight {
+      background-color: #dbeafe;
+      border-left-color: var(--brand-600);
+    }
+    
+    .feature-box {
+      background-color: #f8fafc;
+      border: 1px solid #e2e8f0;
+      border-radius: 0.75rem;
+      padding: 1.5rem;
+      margin: 1.5rem 0;
+    }
+    
+    .comparison-box {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+      margin: 2rem 0;
+    }
+    
+    .premium-features, .free-features {
+      background-color: #f8fafc;
+      border-radius: 0.75rem;
+      padding: 1.5rem;
+      border: 1px solid #e2e8f0;
+    }
+    
+    .quick-start-guide ol {
+      counter-reset: step-counter;
+      list-style: none;
+      padding: 0;
+    }
+    
+    .quick-start-guide li {
+      counter-increment: step-counter;
+      margin-bottom: 2rem;
+      position: relative;
+      padding-left: 3rem;
+    }
+    
+    .quick-start-guide li::before {
+      content: counter(step-counter);
+      position: absolute;
+      left: 0;
+      top: 0;
+      background-color: var(--brand-500);
+      color: white;
+      width: 2rem;
+      height: 2rem;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+    }
+    
+    .btn-primary {
+      background-color: var(--brand-500);
+      color: white;
+      padding: 0.75rem 1.5rem;
+      border-radius: 0.5rem;
+      font-weight: 600;
+      text-decoration: none;
+      display: inline-block;
+      transition: background-color 0.3s ease;
+    }
+    
+    .btn-primary:hover {
+      background-color: var(--brand-600);
+    }
+    
+    .btn-secondary {
+      background-color: var(--muted);
+      color: white;
+      padding: 0.75rem 1.5rem;
+      border-radius: 0.5rem;
+      font-weight: 600;
+      text-decoration: none;
+      display: inline-block;
+      transition: background-color 0.3s ease;
+    }
+    
+    .btn-secondary:hover {
+      background-color: #475569;
+    }
+    
+    .back-link {
+      color: var(--brand-500);
+      text-decoration: none;
+      font-weight: 600;
+      transition: color 0.3s ease;
+      display: inline-flex;
+      align-items: center;
+    }
+    
+    .back-link:hover {
+      color: var(--brand-600);
+    }
+    
+    @media (max-width: 768px) {
+      .comparison-box {
+        grid-template-columns: 1fr;
+      }
+      
+      .btn-primary, .btn-secondary {
+        width: 100%;
+        text-align: center;
+        display: block;
+      }
+    }
+  </style>
+</head>
+<body class="bg-white">
+  <script src="/assets/header-content.js"></script>
+
+  <!-- Hero sektion med blå baggrund og HVID tekst -->
+  <section class="brand-bg text-white py-16 px-4">
+    <div class="max-w-4xl mx-auto">
+      <div class="flex flex-wrap items-center gap-4 mb-6">
+        <span class="bg-blue-800 text-white px-3 py-1 rounded-full text-sm font-medium">Guide</span>
+        <span class="text-blue-100">5 min læsning</span>
+      </div>
+      <h1 class="text-3xl md:text-4xl font-bold mb-4">Beskyt Din Lokation og Identitet med Proton VPN</h1>
+      <p class="text-xl text-blue-100 mb-8">Sådan holder du dine data private online – en praktisk guide til bedre digital sikkerhed.</p>
+      <div class="flex items-center gap-4">
+        <img src="http://static.photos/people/320x320/42" alt="Forfatter avatar" class="w-16 h-16 rounded-full">
+        <div>
+          <div class="font-semibold">Skrevet af Malte Okholm</div>
+          <div class="text-blue-200">Digital Sikkerhedsentusiast</div>
+          <div class="text-blue-200">Oktober 2025</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Artiklens indhold starter KORREKT efter den blå header -->
+  <main class="max-w-4xl mx-auto px-4 py-12 article-content">
+    <p class="text-lg mb-6">I 2025 står vi over for hidtil usete udfordringer med digital overvågning og cybertrusler. Nye undersøgelser viser, at over 70% af danskerne har oplevet forsøg på digital svindel det seneste år, og metoderne bliver stadig mere sofistikerede. Det er derfor vigtigere end nogensinde at beskytte både din lokation og digitale identitet.</p>
+    
+    <blockquote class="border-l-4 border-blue-500 pl-6 py-4 my-8 text-xl italic bg-blue-50 rounded-r-lg">
+      Den seneste sikkerhedsrapport fra oktober 2025 afslører en 300% stigning i identitetstyveri gennem offentlige WiFi-netværk det seneste år. VPN-beskyttelse er ikke længere et valg – det er en nødvendighed.
+    </blockquote>
+
+    <h2 class="text-2xl font-bold mt-12 mb-6">Hvad er Proton VPN?</h2>
+    <p class="mb-6">Proton VPN er mere end bare en VPN-tjeneste – det er et schweizisk udviklet sikkerhedsskjold til din online tilstedeværelse. Tjenesten skaber en uigennemtrængelig, krypteret tunnel mellem din enhed og internettet, der effektivt skjuler din IP-adresse og beskytter dine data mod hackere, overvågning og cyberkriminelle.</p>
+    
+    <div class="tip-box">
+      <h3 class="font-bold text-lg mb-2">Vidste du?</h3>
+      <p>Proton VPN er den eneste større VPN-udbyder, der er 100% open source og årligt gennemgår uafhængige sikkerhedsaudits. I 2025 bestod de deres femte årlige audit uden en eneste kritisk fejl.</p>
+    </div>
+
+    <p class="mb-6">Fundamentet for Proton VPN er bygget på tre grundprincipper:</p>
+    <ul class="list-disc pl-6 mb-8 space-y-3">
+      <li><strong class="font-semibold">Nul-logs garanti:</strong> Din aktivitet bliver aldrig logget eller delt – verificeret gennem uafhængige audits.</li>
+      <li><strong class="font-semibold">Schweizisk privatliv:</strong> Hovedkvarteret i Schweiz sikrer, at dine data er beskyttet af verdens strengeste privatlivslove.</li>
+      <li><strong class="font-semibold">Kompromisløs sikkerhed:</strong> Militærgrade AES-256 kryptering og avancerede protokoller som Stealth sikrer, at din trafik forbliver helt privat.</li>
+    </ul>
+
+    <div class="tip-box">
+      <h3 class="font-bold text-lg mb-2">NetShield beskyttelse</h3>
+      <p>Den nyeste version af NetShield-funktionen blokerer ikke bare annoncer og malware – den beskytter også mod de nyeste AI-drevne phishing-angreb og skjulte kryptominere. I tests blokerede den 99.7% af alle ondsindet indhold.</p>
+    </div>
+
+    <h2 class="text-2xl font-bold mt-12 mb-6">Sådan fungerer Proton VPN i praksis</h2>
+    <p class="mb-6">Proton VPN bruger avanceret teknologi til at beskytte din online aktivitet, men er designet til at være nem at bruge. Her er den tekniske proces forklaret simpelt:</p>
+
+    <div class="feature-box">
+      <h3 class="font-bold text-lg mb-3">Intelligent routing-teknologi</h3>
+      <p>Når du tilslutter dig Proton VPN, analyserer systemet automatisk din forbindelse og vælger den optimale rute gennem deres sikre servernetværk. Din trafik krypteres øjeblikkeligt med militærgrade AES-256 kryptering – samme standard som banker og efterretningstjenester bruger.</p>
+    </div>
+
+    <ol class="list-decimal pl-6 mb-8 space-y-4">
+      <li><strong class="font-semibold">Smart servervalg:</strong> Vælg mellem 3000+ servere i 82 lande med automatisk hastighedsoptimering.</li>
+      <li><strong class="font-semibold">Øjeblikkelig beskyttelse:</strong> VPN Accelerator giver dig lynhurtig kryptering uden hastighedstab.</li>
+      <li><strong class="font-semibold">Automatisk failover:</strong> Hvis en server går ned, skifter du automatisk til den næstbedste forbindelse uden afbrydelse.</li>
+    </ol>
+
+    <div class="tip-box">
+      <h3 class="font-bold text-lg mb-2">Ny i 2025: Quantum-resistant kryptering</h3>
+      <p>Proton VPN er først med implementering af post-quantum kryptering, der beskytter mod fremtidige kvantekomputer-angreb. Din sikkerhed er fremtidssikret.</p>
+    </div>
+
+    <h2 class="text-2xl font-bold mt-12 mb-6">Hvorfor vælge Proton VPN til din digitale sikkerhed?</h2>
+    
+    <p class="mb-6">I en tid hvor digitale trusler udvikler sig dagligt, skiller Proton VPN sig ud med markedets mest omfattende sikkerhedspakke:</p>
+
+    <div class="mb-8">
+      <ul class="list-disc pl-6 space-y-3">
+        <li><strong class="font-semibold">Secure Core-teknologi:</strong> Din trafik routes gennem flere servere i sikre lande før destinationen.</li>
+        <li><strong class="font-semibold">Kill Switch:</strong> Stopper øjeblikkeligt al internet-trafik hvis VPN-forbindelsen dropper, nu med app-specifik kontrol.</li>
+        <li><strong class="font-semibold">DNS-beskyttelse:</strong> Indbygget DNS/IPv6 leak protection og egen DNS-server infrastruktur.</li>
+        <li><strong class="font-semibold">Stealth Protocol:</strong> Ny protokol der gør din VPN-trafik umulig at detektere, perfekt til lande med internetcensur.</li>
+        <li><strong class="font-semibold">Split Tunneling+:</strong> Vælg præcist hvilke apps der skal bruge VPN, nu med automatiske profiler.</li>
+      </ul>
+    </div>
+
+    <h2 class="text-2xl font-bold mt-12 mb-6">2025 Premium Features vs. Gratis Plan</h2>
+    
+    <div class="comparison-box">
+      <div class="premium-features">
+        <h3 class="font-bold text-lg mb-4">Premium fordele</h3>
+        <ul class="list-disc pl-6 space-y-3">
+          <li><strong class="font-semibold">Maksimal hastighed:</strong> VPN Accelerator giver op til 10 Gbps på udvalgte servere.</li>
+          <li><strong class="font-semibold">Alle sikkerhedslag:</strong> Secure Core, NetShield, Tor over VPN.</li>
+          <li><strong class="font-semibold">Global adgang:</strong> 3000+ servere i 82 lande med optimerede streaming-servere.</li>
+          <li><strong class="font-semibold">Proton økosystem:</strong> Fuld integration med ProtonMail, ProtonPass og ProtonCalendar.</li>
+          <li><strong class="font-semibold">Avancerede features:</strong> Port forwarding, dedicated IP (nyhed 2025), P2P support.</li>
+        </ul>
+      </div>
+
+      <div class="free-features">
+        <h3 class="font-bold text-lg mb-4">Gratis plan muligheder</h3>
+        <ul class="list-disc pl-6 space-y-3">
+          <li><strong class="font-semibold">Solid basis-sikkerhed:</strong> Samme stærke kryptering som premium.</li>
+          <li><strong class="font-semibold">Medium hastighed:</strong> Op til 100 Mbps på free-tier servere.</li>
+          <li><strong class="font-semibold">Begrænset netværk:</strong> Adgang til servere i 5 lande.</li>
+          <li><strong class="font-semibold">Én enhed:</strong> Tilslut én enhed ad gangen.</li>
+          <li><strong class="font-semibold">Basis features:</strong> Always-on VPN, automatisk forbindelse.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="tip-box highlight">
+      <h3 class="font-bold text-lg mb-2">2025 Specialtilbud</h3>
+      <p>Premium-planen koster nu kun 4,99 USD/måned ved 2-års abonnement. Inkluderer nu også den nye dedicated IP-feature uden ekstra omkostning.</p>
+    </div>
+
+    <h2 class="text-2xl font-bold mt-12 mb-6">Kom i gang med Proton VPN på 5 minutter</h2>
+    
+    <div class="quick-start-guide">
+      <ol>
+        <li>
+          <strong class="font-semibold">Opret din konto</strong>
+          <p class="mt-2">Gå til <a href="https://protonvpn.com" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:underline">protonvpn.com</a> og vælg mellem gratis eller premium.</p>
+        </li>
+        <li>
+          <strong class="font-semibold">Download den rette app</strong>
+          <p class="mt-2">Vælg mellem apps til Windows, Mac, Linux, iOS, Android eller brug browser-extensions til Chrome/Firefox.</p>
+        </li>
+        <li>
+          <strong class="font-semibold">Aktiver beskyttelse</strong>
+          <p class="mt-2">Start appen, log ind, og aktivér Kill Switch og NetShield for maksimal sikkerhed.</p>
+        </li>
+      </ol>
+    </div>
+
+    <div class="text-center my-12">
+      <a href="https://protonvpn.com" class="btn-primary text-lg px-8 py-4" target="_blank" rel="noopener noreferrer">
+        Hent Proton VPN gratis →
+      </a>
+    </div>
+
+    <p class="text-lg mb-8">I 2025's digitale landskab er stærk VPN-beskyttelse ikke længere en luksus – det er en nødvendighed. Proton VPN leverer ikke bare topklasse sikkerhed og privatliv, men gør det også nemt og tilgængeligt for alle. Start med den gratis plan og opgrader når du er klar til endnu bedre beskyttelse.</p>
+
+    <div class="bg-gray-50 rounded-xl p-6 flex flex-col md:flex-row items-center gap-6 mb-8">
+      <div class="flex-1">
+        <h3 class="font-bold text-lg mb-2">Har du styr på din adgangskode, og er den stærk nok til at modstå hackere?</h3>
+        <p class="text-gray-600">Beskyt dine konti med stærke adgangskoder. Få konkrete tips og lær, hvordan du bruger password managers til at sikre din digitale identitet.</p>
+      </div>
+      <a href="protonpass.html" class="btn-secondary whitespace-nowrap">Læs guide</a>
+    </div>
+
+    <div class="text-center">
+      <a href="/blog.html" class="back-link">
+        <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
+        Tilbage til bloggen
+      </a>
+    </div>
+  </main>
+
+  <script src="/assets/footer-content.js"></script>
+</body>
+</html>

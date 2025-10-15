@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Om Os - Sikker Identitet</title>
+    <meta name="description" content="Mød Malte bag SikkerIdentitet.dk - en 19-årig sikkerhedsentusiast dedikeret til at hjælpe danskere med digital sikkerhed og privatliv.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="preload" href="/assets/header-content.js" as="script">
+    <link rel="preload" href="/assets/footer-content.js" as="script">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            500: '#3b82f6',
+                            600: '#2563eb',
+                            900: '#1e3a8a'
+                        },
+                        muted: '#64748b',
+                        text: '#1f2937'
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            color: #1f2937;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            padding: 12px 30px;
+            border-radius: 8px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <script src="/assets/header-content.js"></script>
+
+    <!-- Hero Section -->
+    <section class="bg-gradient-to-r from-brand-900 to-brand-500 text-white py-20 px-4 text-center">
+        <div class="max-w-3xl mx-auto">
+            <h1 class="text-4xl md:text-5xl font-bold mb-4">Om Sikker Identitet</h1>
+            <p class="text-xl opacity-90 max-w-2xl mx-auto leading-relaxed">
+                Fra passion til mission - hvordan en dedikeret interesse for digital sikkerhed blev til et projekt for alle danskere
+            </p>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="max-w-4xl mx-auto -mt-16 bg-white p-6 md:p-12 rounded-2xl shadow-xl relative mb-20">
+        <!-- Founder Section -->
+        <section class="grid md:grid-cols-3 gap-8 mb-16">
+            <div class="md:col-span-1">
+                <img src="http://static.photos/people/320x240/42" alt="Malte Okholm - stifter af SikkerIdentitet.dk" class="w-full rounded-2xl shadow-lg">
+            </div>
+            <div class="md:col-span-2">
+                <h2 class="text-3xl font-bold text-brand-900 mb-6">Hej, jeg er Malte</h2>
+                <p class="text-lg mb-6 leading-relaxed">
+                    Jeg er 19 år gammel og har en passion for digital sikkerhed der strækker sig langt ud over almindelig interesse. 
+                    Det startede for flere år siden, da jeg opdagede hvor sårbare vi egentlig er online, og hvor vigtig viden om digital beskyttelse er.
+                </p>
+                
+                <p class="text-lg mb-6 leading-relaxed">
+                    I løbet af de sidste år har jeg brugt utallige timer på at fordybe mig i emnet - fra at studere de seneste sikkerhedstrusler 
+                    til at teste forskellige beskyttelsesmetoder i praksis. Jeg har fulgt med i udviklingen af ny teknologi, læst rapporter fra sikkerhedseksperter, 
+                    og mest vigtigt: Lært hvad der rent faktisk virker i den virkelige verden.
+                </p>
+                
+                <p class="text-lg leading-relaxed">
+                    Det der driver mig, er overbevisningen om at viden om digital sikkerhed bør være tilgængelig for alle. For mange virker emnet overvældende 
+                    og teknisk, men det behøver det ikke at være. Med de rigtige værktøjer og den rette viden kan alle lære at beskytte sig selv online.
+                </p>
+            </div>
+        </section>
+
+        <!-- Expertise Section -->
+        <section class="mb-16">
+            <h2 class="text-3xl font-bold text-brand-900 mb-10 text-center">Vores Fokusområder</h2>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="bg-blue-50 p-6 rounded-xl border border-blue-100 text-center">
+                    <i class="fas fa-user-shield text-4xl text-brand-500 mb-4"></i>
+                    <h4 class="text-xl font-semibold text-brand-900 mb-2">Identitetsbeskyttelse</h4>
+                    <p class="text-muted">Metoder til at beskytte din digitale identitet mod tyveri og misbrug</p>
+                </div>
+                
+                <div class="bg-blue-50 p-6 rounded-xl border border-blue-100 text-center">
+                    <i class="fas fa-lock text-4xl text-brand-500 mb-4"></i>
+                    <h4 class="text-xl font-semibold text-brand-900 mb-2">Data Sikkerhed</h4>
+                    <p class="text-muted">Sikring af dine personlige data mod uautoriseret adgang</p>
+                </div>
+                
+                <div class="bg-blue-50 p-6 rounded-xl border border-blue-100 text-center">
+                    <i class="fas fa-eye-slash text-4xl text-brand-500 mb-4"></i>
+                    <h4 class="text-xl font-semibold text-brand-900 mb-2">Online Privatliv</h4>
+                    <p class="text-muted">Teknikker til at kontrollere hvem der ser dine online aktiviteter</p>
+                </div>
+                
+                <div class="bg-blue-50 p-6 rounded-xl border border-blue-100 text-center">
+                    <i class="fas fa-tools text-4xl text-brand-500 mb-4"></i>
+                    <h4 class="text-xl font-semibold text-brand-900 mb-2">Praktiske Værktøjer</h4>
+                    <p class="text-muted">Anbefalinger af konkrete værktøjer der forbedrer din sikkerhed</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="bg-gradient-to-r from-brand-900 to-brand-600 text-white rounded-xl p-8 md:p-12 text-center">
+            <h2 class="text-2xl md:text-3xl font-bold mb-4">Klar til at forbedre din digitale sikkerhed?</h2>
+            <p class="text-lg opacity-90 max-w-2xl mx-auto mb-8">
+                Uanset om du ønsker at lære de basale principper eller dykke ned i avancerede beskyttelsesmetoder, er vi her for at guide dig.
+            </p>
+            <a href="/blog.html" class="cta-button bg-white text-brand-900">Udforsk Vores Guides</a>
+        </section>
+    </main>
+
+    <script src="/assets/footer-content.js"></script>
+</body>
+</html>

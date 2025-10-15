@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kontakt os - Sikker Identitet</title>
+    <meta name="description" content="Kontakt Sikker Identitet. Vi er her for at hjælpe dig med spørgsmål om digital sikkerhed og privatliv.">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="preload" href="/assets/header-content.js" as="script">
+    <link rel="preload" href="/assets/footer-content.js" as="script">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        :root {
+            --brand-500: #3b82f6;
+            --brand-600: #2563eb;
+            --brand-900: #1e3a8a;
+            --muted: #64748b;
+        }
+
+        /* Modern Contact Section */
+        .contact-hero {
+            background: linear-gradient(135deg, var(--brand-900) 0%, var(--brand-500) 100%);
+            color: white;
+            padding: 6rem 1.25rem 5rem;
+            text-align: center;
+        }
+
+        .contact-hero-content {
+            max-width: 50rem;
+            margin: 0 auto;
+        }
+
+        .contact-hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+            line-height: 1.2;
+        }
+
+        .contact-hero p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            line-height: 1.6;
+            max-width: 37.5rem;
+            margin: 0 auto;
+        }
+
+        /* Contact Grid Layout */
+        .contact-grid {
+            max-width: 75rem;
+            margin: -3.75rem auto 5rem;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2.5rem;
+            padding: 0 1.25rem;
+        }
+
+        .contact-form-container {
+            background: #fff;
+            padding: 3.125rem;
+            border-radius: 1.25rem;
+            box-shadow: 0 1.25rem 3.75rem rgba(0,0,0,0.1);
+        }
+
+        .contact-info {
+            background: linear-gradient(135deg, #f8faff 0%, #ffffff 100%);
+            padding: 3.125rem;
+            border-radius: 1.25rem;
+            border: 1px solid rgba(59,130,246,0.1);
+        }
+
+        /* Form Styling */
+        .form-group {
+            margin-bottom: 2rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+            color: var(--brand-900);
+        }
+
+        .form-group input,
+        .form-group textarea,
+        .form-group select {
+            width: 100%;
+            padding: 0.9375rem;
+            border: 2px solid #e2e8f0;
+            border-radius: 0.625rem;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            background: #f8fafc;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus,
+        .form-group select:focus {
+            outline: none;
+            border-color: var(--brand-500);
+            background: #fff;
+            box-shadow: 0 0 0 3px rgba(59,130,246,0.1);
+        }
+
+        .form-group textarea {
+            min-height: 9.375rem;
+            resize: vertical;
+        }
+
+        .submit-btn {
+            background: var(--brand-500);
+            color: white;
+            border: none;
+            padding: 1rem 2.5rem;
+            border-radius: 0.625rem;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            width: 100%;
+        }
+
+        .submit-btn:hover {
+            background: var(--brand-600);
+            transform: translateY(-2px);
+            box-shadow: 0 0.625rem 1.5625rem rgba(59,130,246,0.3);
+        }
+
+        /* Contact Info Styling */
+        .contact-info h2 {
+            color: var(--brand-900);
+            margin-bottom: 2rem;
+            font-size: 1.8rem;
+        }
+
+        .contact-method {
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+            margin-bottom: 2rem;
+            padding: 1.5rem;
+            background: white;
+            border-radius: 0.75rem;
+            box-shadow: 0 0.25rem 0.75rem rgba(0,0,0,0.05);
+        }
+
+        .contact-icon {
+            width: 3.125rem;
+            height: 3.125rem;
+            background: var(--brand-500);
+            border-radius: 0.75rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.2rem;
+            flex-shrink: 0;
+        }
+
+        .contact-details h3 {
+            margin: 0 0 0.5rem 0;
+            color: var(--brand-900);
+            font-size: 1.1rem;
+        }
+
+        .contact-details p {
+            margin: 0;
+            color: var(--muted);
+            line-height: 1.5;
+        }
+
+        /* FAQ Section */
+        .faq-section {
+            max-width: 50rem;
+            margin: 0 auto 5rem;
+            padding: 0 1.25rem;
+        }
+
+        .faq-section h2 {
+            text-align: center;
+            color: var(--brand-900);
+            margin-bottom: 3rem;
+            font-size: 2.2rem;
+        }
+
+        .faq-item {
+            background: #fff;
+            border-radius: 0.75rem;
+            margin-bottom: 1rem;
+            box-shadow: 0 0.25rem 0.75rem rgba(0,0,0,0.05);
+            overflow: hidden;
+        }
+
+        .faq-question {
+            padding: 1.5rem;
+            background: #f8fafc;
+            border: none;
+            width: 100%;
+            text-align: left;
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--brand-900);
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: background 0.3s ease;
+        }
+
+        .faq-question:hover {
+            background: #e2e8f0;
+        }
+
+        .faq-answer {
+            padding: 0 1.5rem;
+            max-height: 0;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .faq-answer.active {
+            padding: 1.5rem;
+            max-height: 31.25rem;
+        }
+
+        /* Success Message Styles */
+        .success-message {
+            background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+            color: white;
+            padding: 2rem;
+            border-radius: 1rem;
+            display: none;
+            align-items: center;
+            gap: 1.5rem;
+            margin-top: 2rem;
+            animation: slideInUp 0.6s ease;
+            box-shadow: 0 0.625rem 1.875rem rgba(16, 185, 129, 0.3);
+        }
+
+        .success-icon {
+            font-size: 3rem;
+            flex-shrink: 0;
+            animation: bounceIn 0.8s ease;
+        }
+
+        .success-content h3 {
+            margin: 0 0 0.5rem 0;
+            font-size: 1.4rem;
+            font-weight: 700;
+        }
+
+        .success-content p {
+            margin: 0;
+            opacity: 0.9;
+            line-height: 1.5;
+        }
+
+        /* Animationer */
+        @keyframes slideInUp {
+            from {
+                opacity: 0;
+                transform: translateY(1.25rem);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes bounceIn {
+            0% {
+                opacity: 0;
+                transform: scale(0.3);
+            }
+            50% {
+                opacity: 1;
+                transform: scale(1.05);
+            }
+            70% {
+                transform: scale(0.9);
+            }
+            100% {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        /* Loading state til knap */
+        .submit-btn.loading {
+            background: #9ca3af;
+            cursor: not-allowed;
+        }
+
+        .submit-btn.loading i {
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        /* Responsive Design */
+        @media (max-width: 60.5rem) {
+            .contact-grid {
+                grid-template-columns: 1fr;
+                margin-top: -2.5rem;
+            }
+            
+            .contact-hero h1 {
+                font-size: 2.5rem;
+            }
+        }
+
+        @media (max-width: 48rem) {
+            .contact-form-container,
+            .contact-info {
+                padding: 1.875rem 1.25rem;
+            }
+            
+            .contact-hero {
+                padding: 5rem 1.25rem 3.75rem;
+            }
+            
+            .contact-hero h1 {
+                font-size: 2rem;
+            }
+            
+            .success-message {
+                flex-direction: column;
+                text-align: center;
+                padding: 1.5rem;
+            }
+        }
+
+        /* Back button styling */
+        .back-button {
+            background: var(--brand-500);
+            color: white;
+            border: none;
+            padding: 0.75rem 1.5rem;
+            border-radius: 0.5rem;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin: 1.875rem auto;
+            display: block;
+        }
+
+        .back-button:hover {
+            background: var(--brand-600);
+            transform: translateY(-2px);
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <script src="/assets/header-content.js"></script>
+    <!-- Hero Section -->
+    <section class="contact-hero">
+        <div class="contact-hero-content">
+            <h1>Kontakt Os</h1>
+            <p>Har du spørgsmål til digital sikkerhed? Vi er her for at hjælpe dig med at beskytte din digitale identitet og privatliv.</p>
+        </div>
+    </section>
+
+    <!-- Contact Grid -->
+    <div class="contact-grid">
+        <!-- Contact Form -->
+        <div class="contact-form-container">
+            <h2 class="text-2xl font-bold mb-6">Send os en besked</h2>
+            <form method="post" aria-label="Kontaktformular til Sikker Identitet" id="contactForm">
+                <div class="form-group">
+                    <label for="name">Fulde navn</label>
+                    <input type="text" id="name" name="name" placeholder="Indtast dit fulde navn" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">E-mail adresse</label>
+                    <input type="email" id="email" name="email" placeholder="Indtast din e-mail" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="subject">Emne</label>
+                    <select id="subject" name="subject" required>
+                        <option value="">Vælg emne</option>
+                        <option value="support">Teknisk support</option>
+                        <option value="question">Generelt spørgsmål</option>
+                        <option value="collaboration">Samarbejde</option>
+                        <option value="other">Andet</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="besked">Din besked</label>
+                    <textarea id="besked" name="besked" placeholder="Beskriv dit spørgsmål eller din henvendelse..." required></textarea>
+                </div>
+
+                <button type="submit" class="submit-btn">
+                    <i class="fas fa-paper-plane"></i> Send besked
+                </button>
+            </form>
+
+            <!-- Success Message - Skjult indtil besked sendes -->
+            <div id="successMessage" class="success-message">
+                <div class="success-icon">
+                    <i class="fas fa-check-circle"></i>
+                </div>
+                <div class="success-content">
+                    <h3>Tak for din besked! ✅</h3>
+                    <p>Din henvendelse er modtaget og vi vender tilbage inden for 24 timer.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Contact Information -->
+        <div class="contact-info">
+            <h2 class="text-2xl font-bold mb-8">Kontaktinformation</h2>
+            
+            <div class="contact-method">
+                <div class="contact-icon">
+                    <i class="fas fa-envelope"></i>
+                </div>
+                <div class="contact-details">
+                    <h3 class="font-semibold">E-mail</h3>
+                    <p>kontakt@sikkeridentitet.dk</p>
+                    <p>Vi svarer inden for 24 timer</p>
+                </div>
+            </div>
+
+            <div class="contact-method">
+                <div class="contact-icon">
+                    <i class="fas fa-clock"></i>
+                </div>
+                <div class="contact-details">
+                    <h3 class="font-semibold">Åbningstider</h3>
+                    <p>Man-Fre: 9:00 - 17:00</p>
+                    <p>Lør-Søn: Lukket</p>
+                </div>
+            </div>
+
+            <div class="contact-method">
+                <div class="contact-icon">
+                    <i class="fas fa-comments"></i>
+                </div>
+                <div class="contact-details">
+                    <h3 class="font-semibold">Support</h3>
+                    <p>Få hjælp til dine spørgsmål om digital sikkerhed og privatliv</p>
+                </div>
+            </div>
+
+            <div class="contact-method">
+                <div class="contact-icon">
+                    <i class="fas fa-shield-alt"></i>
+                </div>
+                <div class="contact-details">
+                    <h3 class="font-semibold">Sikkerhed</h3>
+                    <p>Alle henvendelser behandles fortroligt og sikkert</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- FAQ Section -->
+    <section class="faq-section">
+        <h2 class="text-3xl font-bold mb-12">Ofte Stillede Spørgsmål</h2>
+        
+        <div class="faq-item">
+            <button class="faq-question">
+                Hvor hurtigt svarer I på henvendelser?
+                <i class="fas fa-chevron-down transition-transform duration-300"></i>
+            </button>
+            <div class="faq-answer">
+                <p>Vi stræber efter at svare på alle henvendelser inden for 24 timer på hverdage. Ved komplekse spørgsmål kan det tage op til 48 timer.</p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <button class="faq-question">
+                Kan jeg få hjælp til konkrete sikkerhedsproblemer?
+                <i class="fas fa-chevron-down transition-transform duration-300"></i>
+            </button>
+            <div class="faq-answer">
+                <p>Ja, vi tilbyder vejledning og rådgivning om konkrete sikkerhedsudfordringer. Vi kan hjælpe med alt fra VPN-opsætning til password managers og privatlivsindstillinger.</p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <button class="faq-question">
+                Er mine oplysninger sikre hos jer?
+                <i class="fas fa-chevron-down transition-transform duration-300"></i>
+            </button>
+            <div class="faq-answer">
+                <p>Ja, vi behandler alle personoplysninger fortroligt og i overensstemmelse med GDPR. Vi deler ikke dine oplysninger med tredjeparter uden dit samtykke.</p>
+            </div>
+        </div>
+
+        <!-- Back Button -->
+        <button class="back-button" onclick="goBack()">
+            ← Tilbage
+        </button>
+    </section>
+
+    <script src="/assets/footer-content.js"></script>
+
+    <script>
+        // Form submission handler med success message
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const submitBtn = this.querySelector('.submit-btn');
+            const successMessage = document.getElementById('successMessage');
+            const form = this;
+            
+            // Vis loading state
+            submitBtn.classList.add('loading');
+            submitBtn.innerHTML = '<i class="fas fa-spinner"></i> Sender besked...';
+            
+            // Simuler form submission
+            setTimeout(function() {
+                // Skjul form og vis success message
+                form.style.display = 'none';
+                successMessage.style.display = 'flex';
+                
+                // Scroll til success message
+                successMessage.scrollIntoView({ 
+                    behavior: 'smooth',
+                    block: 'center'
+                });
+                
+            }, 1500);
+        });
+
+        // FAQ functionality
+        document.querySelectorAll('.faq-question').forEach(button => {
+            button.addEventListener('click', () => {
+                const answer = button.nextElementSibling;
+                const isActive = answer.classList.contains('active');
+                
+                // Close all answers
+                document.querySelectorAll('.faq-answer').forEach(ans => {
+                    ans.classList.remove('active');
+                });
+                
+                // Close all icons
+                document.querySelectorAll('.faq-question i').forEach(icon => {
+                    icon.style.transform = 'rotate(0deg)';
+                });
+                
+                // If not active, open this one
+                if (!isActive) {
+                    answer.classList.add('active');
+                    button.querySelector('i').style.transform = 'rotate(180deg)';
+                }
+            });
+        });
+
+        // Back button function
+        function goBack() {
+            try {
+                const ref = document.referrer;
+                const sameOrigin = ref && (new URL(ref)).origin === window.location.origin;
+                if (sameOrigin) {
+                    window.location.href = ref;
+                    return;
+                }
+            } catch(e) {
+                // ignore and fallback to history
+            }
+            if (window.history.length > 1) {
+                window.history.back();
+                return;
+            }
+            window.location.href = '/blog.html';
+        }
+    </script>
+</body>
+</html>

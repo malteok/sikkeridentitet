@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ProtonPass: Sådan får du styr på dine adgangskoder én gang for alle | SikkerIdentitet</title>
+    <meta name="description" content="Lær hvordan ProtonPass kan gøre din hverdag mere sikker og nemmere. En dybdegående guide til password management i 2025.">
+    <link rel="icon" type="image/x-icon" href="/static/favicon.ico">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+        
+        :root {
+            --brand-500: #3b82f6;
+            --brand-600: #2563eb;
+            --brand-900: #1e3a8a;
+            --muted: #64748b;
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            color: #1f2937;
+            background-color: #ffffff;
+        }
+        
+        .hero-gradient {
+            background: linear-gradient(135deg, var(--brand-500) 0%, var(--brand-600) 100%);
+        }
+        
+        .text-brand-500 { color: var(--brand-500); }
+        .text-brand-600 { color: var(--brand-600); }
+        .text-brand-900 { color: var(--brand-900); }
+        .bg-brand-500 { background-color: var(--brand-500); }
+        .bg-brand-600 { background-color: var(--brand-600); }
+        .bg-brand-900 { background-color: var(--brand-900); }
+        .border-brand-500 { border-color: var(--brand-500); }
+        .border-brand-600 { border-color: var(--brand-600); }
+        
+        .prose-custom h2 {
+            font-size: 1.875rem;
+            font-weight: 700;
+            margin-top: 3rem;
+            margin-bottom: 1.5rem;
+            color: var(--brand-900);
+        }
+        
+        .prose-custom h3 {
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+            color: var(--brand-600);
+        }
+        
+        .prose-custom p {
+            line-height: 1.75;
+            margin-bottom: 1.5rem;
+        }
+        
+        .prose-custom ul {
+            list-style: none;
+            padding-left: 0;
+        }
+        
+        .prose-custom li {
+            position: relative;
+            padding-left: 1.75rem;
+            margin-bottom: 0.75rem;
+        }
+        
+        .prose-custom li::before {
+            content: "→";
+            position: absolute;
+            left: 0;
+            color: var(--brand-500);
+            font-weight: 600;
+        }
+        
+        .feature-card {
+            background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+            border: 1px solid #e2e8f0;
+            transition: all 0.3s ease;
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+        
+        .tip-card {
+            background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);
+            border-left: 4px solid #f59e0b;
+        }
+        
+        .comparison-card {
+            background: #f8fafc;
+            border: 2px solid #e2e8f0;
+            transition: all 0.3s ease;
+        }
+        
+        .comparison-card:hover {
+            border-color: var(--brand-500);
+            box-shadow: 0 4px 20px rgba(59, 130, 246, 0.1);
+        }
+        
+        .cta-button {
+            background: linear-gradient(135deg, var(--brand-500) 0%, var(--brand-600) 100%);
+            transition: all 0.3s ease;
+            transform: translateY(0);
+        }
+        
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(59, 130, 246, 0.3);
+        }
+        
+        .author-avatar {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid white;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        @media (max-width: 768px) {
+            .hero-gradient h1 {
+                font-size: 2rem;
+            }
+            .hero-gradient p {
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <script src="/assets/header-content.js"></script>
+    
+    <section class="hero-gradient text-white py-16 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-4xl mx-auto">
+            <div class="flex flex-wrap gap-4 mb-6">
+                <span class="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-white bg-opacity-20 backdrop-blur-sm">
+                    <i data-feather="book-open" class="w-4 h-4 mr-2"></i>
+                    Guide
+                </span>
+                <span class="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-white bg-opacity-20 backdrop-blur-sm">
+                    <i data-feather="clock" class="w-4 h-4 mr-2"></i>
+                    7 min læsning
+                </span>
+            </div>
+            
+            <h1 class="text-3xl sm:text-4xl lg:text-5xl font-bold mb-6 leading-tight">
+                ProtonPass: Sådan får du styr på dine adgangskoder én gang for alle
+            </h1>
+            
+            <p class="text-lg sm:text-xl mb-8 text-white text-opacity-90 leading-relaxed">
+                Glemt at skulle nulstille passwords eller bekymre dig om hacking? ProtonPass er løsningen der giver dig ro i sindet og styr på din digitale sikkerhed.
+            </p>
+            
+            <div class="flex items-center gap-4">
+                <img src="http://static.photos/people/200x200/42" alt="Malte Okholm" class="author-avatar">
+                <div>
+                    <p class="font-semibold">Skrevet af Malte Okholm</p>
+                    <p class="text-sm text-white text-opacity-80">Digital Sikkerhedsekspert • Oktober 2025</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <main class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12 prose-custom">
+        <div class="bg-gray-50 rounded-2xl p-8 mb-12">
+            <p class="text-lg leading-relaxed mb-0">
+                I en verden hvor vi alle har snart 100 forskellige online konti, er det umuligt at huske stærke og unikke adgangskoder til hver eneste tjeneste. Alligevel insisterer mange af os på at køre rundt i en cirkel af glemte passwords, simple koder der genbruges, og den konstante angst for at blive hacket. ProtonPass er her for at bryde den cirkel.
+            </p>
+        </div>
+
+        <p class="text-lg">
+            Ifølge de seneste tal fra Cybersikkerhedsrådet bruger over 65% af danskerne stadig de samme adgangskoder på tværs af tjenester, hvilket gør os ekstremt sårbare over for identitetstyveri. Men det behøver ikke at være sådan.
+        </p>
+
+        <h2>Hvad er ProtonPass, og hvorfor er det anderledes?</h2>
+        <p>
+            ProtonPass er ikke bare endnu en password manager. Det er en komplet sikkerhedsløsning der er bygget fra bunden med fokus på privatliv og sikkerhed. Udviklet af de samme folk bag ProtonMail og ProtonVPN, bringer ProtonPass samme tankegang om zero-knowledge arkitektur til password management.
+        </p>
+
+        <p>
+            I modsætning til mange andre løsninger på markedet, kan Proton faktisk ikke læse dine adgangskoder. Alt bliver krypteret på din enhed før det nogensinde når deres servere, hvilket betyder at selv ved et hypotetisk databrud ville hackere ikke kunne læse dine data.
+        </p>
+
+        <div class="tip-card rounded-xl p-6 my-8">
+            <h3 class="flex items-center gap-2 mb-3">
+                <i data-feather="shield" class="w-5 h-5 text-amber-600"></i>
+                Zero-knowledge i praksis
+            </h3>
+            <p class="mb-0">
+                Zero-knowledge arkitektur betyder at kun du har nøglerne til dine data. Proton fungerer som en sikker boks hvor de selv ikke kan se indholdet. Det er den samme tilgang som banker bruger til at beskytte dine penge - bare anvendt på dine digitale oplysninger.
+            </p>
+        </div>
+
+        <h2>De vigtigste funktioner der gør en forskel</h2>
+        <p>ProtonPass kommer med en række funktioner der gør det til et af de mest komplette password managers på markedet i 2025.</p>
+
+        <div class="grid md:grid-cols-3 gap-6 my-8">
+            <div class="feature-card rounded-xl p-6">
+                <div class="bg-brand-500 w-12 h-12 rounded-lg flex items-center justify-center mb-4">
+                    <i data-feather="mail" class="w-6 h-6 text-white"></i>
+                </div>
+                <h3>Integrerede email-aliasser</h3>
+                <p class="text-sm text-gray-600">
+                    Opret midlertidige email-adresser der videresender mails til din rigtige inbox. Luk dem nemt hvis de begynder at modtage spam.
+                </p>
+            </div>
+
+            <div class="feature-card rounded-xl p-6">
+                <div class="bg-brand-500 w-12 h-12 rounded-lg flex items-center justify-center mb-4">
+                    <i data-feather="smartphone" class="w-6 h-6 text-white"></i>
+                </div>
+                <h3>To-faktor autentificering indbygget</h3>
+                <p class="text-sm text-gray-600">
+                    Ingen behov for separate apps. ProtonPass har to-faktor koder indbygget, hvilket giver færre apps og mere strømlinet login.
+                </p>
+            </div>
+
+            <div class="feature-card rounded-xl p-6">
+                <div class="bg-brand-500 w-12 h-12 rounded-lg flex items-center justify-center mb-4">
+                    <i data-feather="lock" class="w-6 h-6 text-white"></i>
+                </div>
+                <h3>Avanceret kryptering</h3>
+                <p class="text-sm text-gray-600">
+                    Implementerer de nyeste algoritmer som er modstandsdygtige over for fremtidige trusler fra kvantecomputere.
+                </p>
+            </div>
+        </div>
+
+        <h2>Sådan kommer du i gang på få minutter</h2>
+        <p>At komme i gang med ProtonPass er overraskende enkelt, og du kan gøre det i løbet af en kaffepause.</p>
+
+        <div class="bg-gray-50 rounded-2xl p-8 my-8">
+            <ol class="space-y-6">
+                <li class="flex gap-4">
+                    <span class="flex-shrink-0 w-8 h-8 bg-brand-500 text-white rounded-full flex items-center justify-center font-bold">1</span>
+                    <div>
+                        <h3 class="font-semibold mb-2">Opret din konto</h3>
+                        <p class="text-gray-600">Start med at besøge proton.me/pass og opret en konto. Hvis du allerede har ProtonMail eller ProtonVPN, kan du bruge den samme konto.</p>
+                    </div>
+                </li>
+                <li class="flex gap-4">
+                    <span class="flex-shrink-0 w-8 h-8 bg-brand-500 text-white rounded-full flex items-center justify-center font-bold">2</span>
+                    <div>
+                        <h3 class="font-semibold mb-2">Installér udvidelsen</h3>
+                        <p class="text-gray-600">Download ProtonPass til din browser - den understøtter Chrome, Firefox, Safari og Edge. Installationen tager under et minut.</p>
+                    </div>
+                </li>
+                <li class="flex gap-4">
+                    <span class="flex-shrink-0 w-8 h-8 bg-brand-500 text-white rounded-full flex items-center justify-center font-bold">3</span>
+                    <div>
+                        <h3 class="font-semibold mb-2">Importer dine passwords</h3>
+                        <p class="text-gray-600">Brug import-funktionen til at hente alle dine eksisterende adgangskoder fra din browser eller anden password manager.</p>
+                    </div>
+                </li>
+                <li class="flex gap-4">
+                    <span class="flex-shrink-0 w-8 h-8 bg-brand-500 text-white rounded-full flex items-center justify-center font-bold">4</span>
+                    <div>
+                        <h3 class="font-semibold mb-2">Opsæt mobilappen</h3>
+                        <p class="text-gray-600">Download appen til din telefon og aktiver biometrisk login så du altid har dine passwords lige ved hånden.</p>
+                    </div>
+                </li>
+            </ol>
+        </div>
+
+        <h2>Hvordan sikrer ProtonPass egentlig dine data?</h2>
+        <p>Sikkerheden bag ProtonPass er noget af det der virkelig skiller den ud fra mængden. Her er hvordan de beskytter dine oplysninger:</p>
+
+        <div class="grid md:grid-cols-2 gap-4 my-8">
+            <div class="flex items-start gap-3 p-4 bg-white rounded-lg border border-gray-200">
+                <i data-feather="flag" class="w-5 h-5 text-brand-500 mt-1"></i>
+                <div>
+                    <h4 class="font-semibold">Schweizisk databeskyttelse</h4>
+                    <p class="text-sm text-gray-600">Dine data er beskyttet af Schweiz' strenge privatlovgivning, som er stærkere end EU's GDPR</p>
+                </div>
+            </div>
+            <div class="flex items-start gap-3 p-4 bg-white rounded-lg border border-gray-200">
+                <i data-feather="key" class="w-5 h-5 text-brand-500 mt-1"></i>
+                <div>
+                    <h4 class="font-semibold">End-to-end kryptering</h4>
+                    <p class="text-sm text-gray-600">Alt krypteres på din enhed før det sendes til servere</p>
+                </div>
+            </div>
+            <div class="flex items-start gap-3 p-4 bg-white rounded-lg border border-gray-200">
+                <i data-feather="code" class="w-5 h-5 text-brand-500 mt-1"></i>
+                <div>
+                    <h4 class="font-semibold">Åben kildekode</h4>
+                    <p class="text-sm text-gray-600">Uafhængige eksperter kan kontrollere koden for svagheder</p>
+                </div>
+            </div>
+            <div class="flex items-start gap-3 p-4 bg-white rounded-lg border border-gray-200">
+                <i data-feather="check-circle" class="w-5 h-5 text-brand-500 mt-1"></i>
+                <div>
+                    <h4 class="font-semibold">Regelmæssige audits</h4>
+                    <p class="text-sm text-gray-600">Årlige sikkerhedstest af anerkendte tredjeparter</p>
+                </div>
+            </div>
+        </div>
+
+        <h2>Er det værd at betale for premium?</h2>
+        <p>ProtonPass tilbyder både en gratis og en betalt version, og valget afhænger af dine behov. Den gratis version er faktisk ret alsidig og passer fint til de fleste privatbrugere.</p>
+
+        <div class="grid md:grid-cols-2 gap-6 my-8">
+            <div class="comparison-card rounded-xl p-6">
+                <h3 class="text-xl font-bold mb-4 text-brand-900">ProtonPass Unlimited</h3>
+                <ul class="space-y-2">
+                    <li class="flex items-center gap-2">
+                        <i data-feather="check" class="w-4 h-4 text-green-500"></i>
+                        Ubegrænset antal adgangskoder
+                    </li>
+                    <li class="flex items-center gap-2">
+                        <i data-feather="check" class="w-4 h-4 text-green-500"></i>
+                        Ubegrænsede enheder samtidigt
+                    </li>
+                    <li class="flex items-center gap-2">
+                        <i data-feather="check" class="w-4 h-4 text-green-500"></i>
+                        Ubegrænsede email-aliasser
+                    </li>
+                    <li class="flex items-center gap-2">
+                        <i data-feather="check" class="w-4 h-4 text-green-500"></i>
+                        Integreret to-faktor authenticator
+                    </li>
+                    <li class="flex items-center gap-2">
+                        <i data-feather="check" class="w-4 h-4 text-green-500"></i>
+                        Priority kundesupport
+                    </li>
+                    <li class="flex items-center gap-2">
+                        <i data-feather="check" class="w-4 h-4 text-green-500"></i>
+                        Avanceret deling med familie
+                    </li>
+                </ul>
+            </div>
+
+            <div class="comparison-card rounded-xl p-6">
+                <h3 class="text-xl font-bold mb-4 text-gray-600">Gratis version</h3>
+                <ul class="space-y-2">
+                    <li class="flex items-center gap-2">
+                        <i data-feather="check" class="w-4 h-4 text-green-500"></i>
+                        Op til 10 adgangskoder
+                    </li>
+                    <li class="flex items-center gap-2">
+                        <i data-feather="check" class="w-4 h-4 text-green-500"></i>
+                        1 enhed af gangen
+                    </li>
+                    <li class="flex items-center gap-2">
+                        <i data-feather="check" class="w-4 h-4 text-green-500"></i>
+                        10 email-aliasser om måneden
+                    </li>
+                    <li class="flex items-center gap-2">
+                        <i data-feather="check" class="w-4 h-4 text-green-500"></i>
+                        Basis to-faktor support
+                    </li>
+                    <li class="flex items-center gap-2">
+                        <i data-feather="check" class="w-4 h-4 text-green-500"></i>
+                        Standard support
+                    </li>
+                    <li class="flex items-center gap-2">
+                        <i data-feather="check" class="w-4 h-4 text-green-500"></i>
+                        Begrænset deling
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <p>For de fleste vil den gratis version være fin til at starte med. Du kan altid opgradere senere hvis du finder ud af at du har brug for flere funktioner.</p>
+
+        <div class="tip-card rounded-xl p-6 my-8">
+            <h3 class="flex items-center gap-2 mb-3">
+                <i data-feather="gift" class="w-5 h-5 text-amber-600"></i>
+                God rabat til nye brugere
+            </h3>
+            <p class="mb-0">
+                Lige nu tilbyder Proton 50% rabat på første år af Unlimited-planen, hvilket bringer prisen ned til omkring 30 kr. om måneden. Det er en fremragende måde at komme i gang på.
+            </p>
+        </div>
+
+        <h2>Tips til at få mest ud af ProtonPass</h2>
+        <p>For at maksimere din sikkerhed og effektivitet, her er nogle tips jeg anbefaler:</p>
+
+        <div class="space-y-4 my-8">
+            <div class="bg-white rounded-lg border border-gray-200 p-6">
+                <h3 class="flex items-center gap-2 mb-2">
+                    <i data-feather="zap" class="w-5 h-5 text-brand-500"></i>
+                    Brug password-generatoren
+                </h3>
+                <p class="text-gray-600">Lad ProtonPass generere dine passwords i stedet for at finde på dem selv. De skaber stærke, tilfældige koder der er næsten umulige at gætte.</p>
+            </div>
+
+            <div class="bg-white rounded-lg border border-gray-200 p-6">
+                <h3 class="flex items-center gap-2 mb-2">
+                    <i data-feather="fingerprint" class="w-5 h-5 text-brand-500"></i>
+                    Aktiver biometrisk login
+                </h3>
+                <p class="text-gray-600">Brug fingeraftryk eller ansigtsgenkendelse til at låse din ProtonPass-boks op. Det er både mere sikkert og bekvemt end at skulle huske endnu et password.</p>
+            </div>
+
+            <div class="bg-white rounded-lg border border-gray-200 p-6">
+                <h3 class="flex items-center gap-2 mb-2">
+                    <i data-feather="users" class="w-5 h-5 text-brand-500"></i>
+                    Opret en nødplan
+                </h3>
+                <p class="text-gray-600">Sæt trusted contacts op så dine pårørende kan få adgang til vigtige konti i nødstilfælde uden at kompromittere din sikkerhed.</p>
+            </div>
+        </div>
+
+        <div class="text-center my-12">
+            <a href="https://proton.me/pass" target="_blank" rel="noopener noreferrer" class="cta-button inline-flex items-center gap-2 text-white px-8 py-4 rounded-xl font-semibold text-lg">
+                Prøv ProtonPass gratis i dag
+                <i data-feather="arrow-right" class="w-5 h-5"></i>
+            </a>
+        </div>
+
+        <div class="bg-gray-50 rounded-2xl p-8 my-12">
+            <p class="text-lg leading-relaxed mb-0">
+                ProtonPass repræsenterer ikke bare en teknologisk løsning, men en ændring i tilgangen til digital sikkerhed. I stedet for at være noget besværligt og kompliceret, bliver det til en naturlig del af din digitale hverdag der giver dig ro i sindet og frihed til at fokusere på det der virkelig betyder noget.
+            </p>
+        </div>
+
+        <div class="bg-white rounded-xl border border-gray-200 p-6 my-8 flex flex-col sm:flex-row items-center justify-between gap-4">
+            <div>
+                <h3 class="font-semibold mb-1">Vil du have fuld privatlivsbeskyttelse til din email?</h3>
+                <p class="text-gray-600">Opdag hvordan ProtonMail kan give dig sikker og krypteret email-kommunikation uden at ofre brugervenlighed.</p>
+            </div>
+            <a href="protonmail.html" class="bg-gray-600 hover:bg-gray-700 text-white px-6 py-3 rounded-lg font-medium transition-colors whitespace-nowrap">
+                Læs ProtonMail guide
+            </a>
+        </div>
+
+        <div class="text-center my-8">
+            <a href="/blog.html" class="inline-flex items-center gap-2 text-brand-600 hover:text-brand-700 font-medium">
+                <i data-feather="arrow-left" class="w-4 h-4"></i>
+                Tilbage til bloggen
+            </a>
+        </div>
+    </main>
+
+    <script src="/assets/footer-content.js"></script>
+    <script>feather.replace();</script>
+</body>
+</html>
